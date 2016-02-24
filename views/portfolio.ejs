@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>張柏堅</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="javascript/app.js"></script>
+  </head>
+  <body ng-app="mainApp">
+<!-- ========== I'm NAVBAR ==========  -->
+  <% include partials/header %>
+  <div class="main-container" ng-controller="portfolioCtrl">
+<div ng-cloak>
+  <md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="工作成品">
+        <md-content class="md-padding pure-g">
+          <div class="single-page pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3" ng-repeat="po in work">
+          <a ng-href="{{po.href}}" target="_blank">
+            <div class="bg" style="background: url('{{po.img}}') center 100%;background-size: cover "></div>
+            <div class="mask">
+              <p class="portfolio-desc">
+              {{po.desc}}
+              </p>
+            </div>
+            <p>{{po.name}}</p>
+            </a>
+          </div>
+        </md-content>
+      </md-tab>
+      <md-tab label="練習小品">
+        <md-content class="md-padding pure-g">
+           <div class="single-page practice pure-u-sm-1-6 pure-u-md-1-8" ng-repeat="po in practice" data-desc="{{po.desc}}" data-link="{{po.href}}">
+            <div class="bg"></div>
+            <div class="mask">
+              
+            </div>
+            <p class="practice-name">{{po.name}}</p>
+          </div>
+          <div class="practice__description">{{po.desc}}</div>
+          <h1 class="md-display-2">建構中</h1>
+        </md-content>
+      </md-tab>
+      <md-tab label="其他">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">建構中</h1>
+
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>
+  </div>
+
+
+  </body>
+</html>

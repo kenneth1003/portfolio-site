@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title>張柏堅</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/profile.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.min.js"></script>
+    <script src="JavaScript/index.js"></script>
+    <script src="JavaScript/myJS.js"></script>
+    <script src="JavaScript/guest.js"></script>
+    <style type="text/css">
+
+    .main-container{
+      padding: 30px 50px
+    }
+    .time-stamp{
+      font-size: 12px;
+      color: #888;
+    }
+    .pager{
+      background-color: #fff;
+    border-color: #ccc;
+    }
+    .leave-message{
+      padding: 30px;
+  
+    }
+    @media(max-width: 768px){
+      .main-container{
+        padding: 15px
+      }
+      .leave-message{
+        padding: 10px
+      }
+    }
+    </style>
+  </head>
+
+  <body id="body">
+
+
+<!-- ========== I'm NAVBAR ==========  -->
+  <% include partials/header %>
+
+
+
+<!-- ========== I'm JUMBOTRON ========== -->
+
+
+
+
+<!-- ========== MESSAGE BOARD ========== -->
+  <div id="home" class="main-container" ng-controller='CommentController as comments' ng-mock>
+    <div class="messageBoard">
+      <div class="my-inner">
+      <div class="comment panel panel-default" ng-repeat="x in comment | limitTo: pageSize : currentPage * pageSize">
+        <div class="panel-heading">訪客：{{x.Visitor}} <span class="time-stamp">於 {{x.CreateDate}}</span></div>
+        <p class="panel-body">{{x.Comment}}<p>
+      </div>
+    <div align="center">
+      <button class="btn btn-default" ng-disabled="currentPage == 0" ng-click=" currentPage = currentPage - 1">
+        上一頁
+      </button>
+      {{currentPage+1}}/{{numberOfPages()}}
+      <button class="btn btn-default" ng-disabled="currentPage >= comment.length / pageSize - 1" ng-click="currentPage = currentPage + 1">
+          下一頁
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- ========== LEAVING MESSAGE ========== -->
+    <div class="leave-message">
+      <div class="content">
+      <form action="/comment" name="form" method="post" novalidate >
+        <label>訪客名稱：</label></br>
+        <input class="form-control" ng-model="v" type="text" name="visitor" required>
+        </br>
+        <label>留言：</label>
+        </br>
+        <textarea class="form-control" style="height: 100px" ng-model="t" name="comment" rows="10" cols="30" required></textarea>
+        </br>
+        <label>驗證碼：</label>
+        </br>
+        <div >
+        <input class="form-control" style="width: 184px" type="text" ng-model="c" name="captcha" required/>   
+        </div>
+        </br>     
+        <img src="data:image/jpeg;base64,<%= valicode %>"/>&nbsp;&nbsp;<span id="wrongCap"><%= wrongCap %></span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="btn btn-default" type="submit" onclick="setTime()" value="送出" ng-disabled="form.$invalid">
+        <input id="time" type="text" name="tim" value="123" style="display:none">
+       </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

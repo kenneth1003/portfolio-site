@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>張柏堅</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/profile.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="javascript/app.js"></script>
+    <style type="text/css">
+      .index-perface{margin-top: 20%;max-width: 300px;}
+    </style>
+  </head>
+  <body ng-app="mainApp">
+<!-- ========== I'm NAVBAR ==========  -->
+  <% include partials/header %>
+  <div class="main-container" ng-controller="profileCtrl">
+    <p class="index-perface">
+      我是一個前端工程師，喜好電腦科學，未來希望能朝不同的web領域中邁進，精進自己的技能，這是我的個人網站，請多多指教！
+    </p>
+</div>
+
+  </body>
+</html>

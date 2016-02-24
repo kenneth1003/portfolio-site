@@ -1,0 +1,75 @@
+{
+	"en":{
+
+	},
+	"ch":{
+		"work":{
+
+			"p1":{
+				"name": "關島之家-關島婚禮",
+				"href": "http://wedding.guam.com.tw/",
+				"desc": "此為個人依設計師需求所切之網頁，",
+				"img": "img/pw001.png"	
+			},
+			"p2":{
+				"name": "awoo SEO工具",
+				"href": "https://www.awoo.org/",
+				"desc": "縮圖為\"天下無狗\"關鍵字工具頁面(需有會員才能使用)，除了\"球來就打\"頁面為另一位前端切版，其餘皆為個人依設計師需求所切之版面，包含首頁的產品故事、以及\"How It Works\"",
+				"img": "img/pw002-1.png"
+			}
+		},
+		"practice":{
+			"p1":{
+				"name": "project1",
+				"href": "#4",
+				"desc": "this is project4",
+				"img": "123"					
+			},			"p2":{
+				"name": "project2",
+				"href": "#4",
+				"desc": "this is project4",
+				"img": "123"					
+			},			"p3":{
+				"name": "project3",
+				"href": "#4",
+				"desc": "this is project4",
+				"img": "123"					
+			},			"p4":{
+				"name": "project4",
+				"href": "#4",
+				"desc": "this is project4",
+				"img": "123"					
+			},			"p4":{
+				"name": "project5",
+				"href": "#4",
+				"desc": "this is project4",
+				"img": "123"					
+			},			"p5":{
+				"name": "project6",
+				"href": "#4",
+				"desc": "this is project4",
+				"img": "123"					
+			},			"p6":{
+				"name": "project7",
+				"href": "#4",
+				"desc": "this is project4",
+				"img": "123"					
+			},			"p7":{
+				"name": "project8",
+				"href": "#4",
+				"desc": "this is project4",
+				"img": "123"					
+			},			"p7":{
+				"name": "project9",
+				"href": "#4",
+				"desc": "this is project4",
+				"img": "123"					
+			},			"p8":{
+				"name": "project10",
+				"href": "#4",
+				"desc": "this is project4",
+				"img": "123"					
+			}
+		}	
+	}
+}

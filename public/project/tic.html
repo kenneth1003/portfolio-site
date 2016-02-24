@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style type="text/css">
+      body{
+        background-color: rgba(240, 240, 240, 0.5);
+      }
+      div.grid{
+        background-color: #eee;
+        height:97px;
+        width:97px;
+        border:dotted 1px;
+
+        font-size:66px; 
+        border-radius: 5px;
+        margin:1px;
+      }
+      h2#over{
+        font-size: 30px;
+      }
+      div#result{
+        border:solid 2px ;
+        padding:6px;
+        margin:5px;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 20px;
+        color: #777;
+      }
+      div#opponent{
+        height:120px;
+        text-align: left;
+        font-size: 20px;
+      }
+      h1{
+        color:#777;
+      }
+      label{
+        color:#777;
+      }
+      div#level{
+        color:#777;
+      }
+      hr{
+        color: #777;
+      }
+      span#label{
+        margin:6px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container" align="center">
+      <h1>TIC TAC TOE</h2>
+        <hr>
+
+    <div class="col-sm-offset-3 col-sm-6 col-xs-12" align="center">
+      <div class="grid col-xs-4" id="1"></div>
+      <div class="grid col-xs-4" id="2"></div>
+      <div class="grid col-xs-4" id="3"></div>
+    </br></br></br></br></br>
+      <div class="grid col-xs-4" id="4"></div>
+      <div class="grid col-xs-4" id="5"></div>
+      <div class="grid col-xs-4" id="6"></div>
+       </br></br></br></br></br>
+      <div class="grid col-xs-4" id="7"></div>
+      <div class="grid col-xs-4" id="8"></div>
+      <div class="grid col-xs-4" id="9"></div>
+    </div>
+
+    <div id="result" class="col-xs-12">
+      <div class="col-xs-3">
+      <span id="label" class="label label-primary">Result</span>
+      <h4 id="over"> --- </h4>
+      </div>
+      <div class="col-xs-3">
+      <span id="label" class="label label-success">With</span>
+    </br>
+      <button class="btn btn-default" onclick="opponent(0)" active="true">AI easy</button>
+      <button class="btn btn-default"onclick="opponent(1)">AI normal</button>
+    </div>
+    <div class="col-xs-3">
+    <span id="label" class="label label-danger" stype="margin:6px;">Level</span>
+    <h4 id="level">EASY</h4>
+  </div>
+  <div class="col-xs-3">
+  </br></br>
+  <button class="btn btn-default" onclick="reset()">RESET</button>
+</div>
+    </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+  //若格子上沒東西，點擊劃圈
+    var player = ['Player'];
+    var com = ['AI'];
+    var alterIdx = 0;  
+    var aiIdx = 0;
+ // combination of winning
+    var win = [
+        [1, 4, 7],
+        [2, 5, 8],
+        [3, 6, 9],
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8 ,9],
+        [1, 5, 9],
+        [3, 5, 7]
+      ];
+
+  // opponent choosing
+    function opponent(opp){
+      aiIdx = opp;
+      if(opp == 0){
+      $('#level').html('EASY');
+      }else if(opp ==1){
+        $('#level').html('NORMAL');
+      }
+    }
+  // player move
+    $(document).ready(function(){
+      $('.grid').click(function(){
+        if(alterIdx % 2 == 0){
+          if($(this).html() == ''){
+            $(this).html('<i class="fa fa-close"></i>');
+            player.push(parseInt($(this).attr('id')));
+            check(player);
+            alterIdx += 1;
+            if(aiIdx == 0){
+             AI();
+            }else if(aiIdx == 1){
+            AI_M(player, com);
+            }
+          }
+        }
+      });
+    });
+
+  // com move
+  function AI(){
+  if(alterIdx % 2 == 1){
+    $(document).ready(function(){
+      for(k = 1; k <= 9; k++){
+          if(document.getElementById(k).innerHTML == ''){
+              document.getElementById(k).innerHTML ='<i class="fa fa-circle-o"></i>';
+              com.push(k);
+              check(com);
+              alterIdx += 1;
+              return;
+            }
+          }
+       });
+     }
+   }
+  function AI_M(opp, self){
+  if(alterIdx >= 8){
+    return;
+  }
+  if(alterIdx % 2 == 1){
+    $(document).ready(function(){
+      for(j = 1; j <= 9; j++){
+        var se = self.slice()
+        se.push(j);
+          if(document.getElementById(j).innerHTML == ''){
+            if(AICheck(se) === true){
+              document.getElementById(j).innerHTML ='<i class="fa fa-circle-o"></i>';
+              com.push(j);
+              check(com);
+              alterIdx += 1;
+              return;
+             }
+           }
+          }for(j = 1; j <= 9; j++){
+              var op = opp.slice()
+              op.push(j);
+            if(document.getElementById(j).innerHTML == ''){
+              if(AICheck(op) === true){
+              document.getElementById(j).innerHTML ='<i class="fa fa-circle-o"></i>';
+              com.push(j);
+              check(com);
+              alterIdx += 1;
+              return;
+             }
+            }
+          }
+       });
+      AI();
+     }
+   }
+  function reset(){
+    player = ['Player'];
+    com = ['AI'];
+    alterIdx = 0;
+    $('.grid').html('');
+    $('#over').html('---');
+  }
+  // check winning condition
+    function check(player){
+      var len = win.length;
+      for(i = 0; i < len; i++){
+        if(player.indexOf(win[i][0]) != -1 && player.indexOf(win[i][1]) != -1 && player.indexOf(win[i][2]) != -1){
+          alterIdx = undefined;
+          $('#over').html(player[0] + ' wins');
+          $('#over').fadeIn();
+          return;
+        }
+        }
+          if(alterIdx == 8){
+          console.log(player);
+          $('#over').html('Draw');
+          $('#over').fadeIn();
+          return;
+      }
+    };
+    function AICheck(player){
+      var len = win.length;
+      for(i = 0; i < len; i++){
+        if(player.indexOf(win[i][0]) != -1 && player.indexOf(win[i][1]) != -1 && player.indexOf(win[i][2]) != -1){
+          return true;
+        }
+      }
+       return false;
+    };
+  </script>
+</html>

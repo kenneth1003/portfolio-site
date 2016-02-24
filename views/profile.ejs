@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>張柏堅</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/profile.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <script src="javascript/app.js"></script>
+  </head>
+  <body ng-app="mainApp">
+<!-- ========== I'm NAVBAR ==========  -->
+  <% include partials/header %>
+  <div class="main-container" ng-controller="profileCtrl">
+
+    <div class="top-box">
+      <div class="col-xs-3 head-shot-box">
+        <img class="head-shot" src="img/myphoto2.jpg" />  
+      </div>
+      <ul class="profile-list col-sm-9 col-xs-12">
+        <li>{{profile.data.ch.chName}}</li>
+        <li>{{profile.data.ch.enName}}</li>
+        <li>{{profile.data.ch.email}}</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="intro-box exp">
+        <h3>學經歷</h3>
+        <hr>
+      <ul class="col-xs-12 col-sm-6">
+        <li>中央大學財務金融所 - <span class="title">碩士</span><span class="since">2012.09 - 2014.07</span></li>
+        <li>中原大學國際貿易學系 - <span class="title">學士</span><span class="since">2008.09 - 2012.06</span></li>
+      </ul>
+      <ul class="col-xs-12 col-sm-6">
+        <li>阿物國際 - <span class="title">前端工程師</span><span class="since since--now">2015.11 迄今</span></li>
+        <li>陸軍後勤指揮部 - <span class="title">少尉政戰官</span><span class="since">2014.08 - 2015-07</span></li>
+      </ul>
+      </div>
+      <div class="intro-box grow">
+        <h3>成長背景</h3>
+        <hr>
+            <p>    我出生於香港，母語為粵語，父親為香港人，母親為台灣人，五歲時從香港回台灣定居，家庭成員有父母、哥哥及姐姐，父親的工作為上海飯店裝潢公司的國際業務經理，母親則是家庭主婦。平時家人間的互動緊密，父親即使不在台灣也會定期關心家人的生活情形，遇到困難時，家人總是互相關心加油打氣，形成我最重要的支柱和動力，從小父母灌輸我的觀念並非物質上或金錢上的滿足，而是無形卻是最重要的價值觀，例如親人朋友間的相處、誠信以及知足常樂等等。</p>
+
+            
+            <p>在就讀研究所時接觸到程式撰寫，因而對資訊領域產生濃厚的興趣，在程式撰寫的作業和考試都有很好的表現；論文寫作時，程式撰寫往往是同學常遇到的瓶頸，但我都能順利地完成；在預備軍官考試的計算機概論取得了相對高的分數，使我能取得第一志願政戰官的資格；在服兵役的期間決定朝相關的領域發展，發揮在這一方面的所長，我的英文能力也使我能更有效地利用多種管道學習程式語言、資料結構以及資料庫系統等相關的知識，滿足自己對於資訊領域學習的渴望，目前除了前端的工作外，也廣泛web相關的技術，期望這些技能能與實務界接軌，創造價值。</p>
+      </div>
+      <div class="intro-box char">
+        <h3>人格特質</h3>
+        <hr>
+               <p>人格特質方面，我善於獨立思考，平時喜歡玩需要動腦的遊戲，面對問題時，我不會馬上尋求答案，而是在思考各種可能性後再嘗試解答，以客觀的角度探究問題，培養獨立思考的能力；在準備研究所入學考試時，我與大多數的學生不同，靠著自己研讀書籍在筆試取得了好成績，重榜多間學校，邏輯思考也讓我在研究所時完成許多的資料處理程式撰寫。</p>
+
+        <p>我具備沈著與抗壓性的特質，由於我的興趣是打撞球，在大專盃的比賽中拿下個人第二名優異的成績，能有這樣的結果，除了事前的練習與投入，最重要的是在關鍵時刻面對高壓下仍保有正常的水準；在擔任政戰官時，除了平時需要完成例行的業務外，也時常需要處理突如其來的任務，因此面臨到很大的時間壓力，我仍然能照常完成並保持平時的工作表現，得到長官的信賴。</p>
+
+        <p>除此之外我熱愛學習，不自我設限，在大二的時候首次接觸鋼琴，短暫時間內就即習得世界名曲，打破多數人認為成人在技能學習上會有所限制的框架；預備軍官受訓時，同儕都來自於國內一流學府，但是在學習的積極度及熱誠，我都比同儕表現更為突出。最後，我對許多事情都有著一份堅持，曾於跨年時從中壢溜直排輪到總統府，縱使技術不好，還是堅持靠自己到達成，立下的目標一定盡力完成，未達到目標以前，不輕言放棄!</p>
+      </div>
+      <div class="intro-box future">
+        <h3>未來展望</h3>
+        <hr>
+        <p>最後，我相信憑藉著我正向的人格特質、對於財務金融領域廣泛的認識、程式能力、語文能力以及在擔任政戰官學到的團隊合作經驗，能職場上相關領域有所發揮，我也將不斷地保持學習產業相關的知識、加強自身的競爭力，鞭策自己不斷向前；在積極認真的自我學習和團隊經驗累積中，期許自身能成為一位能獨當一面的工作者，和所屬團隊有效地完成公司指派任務和自我設定的目標。</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  </body>
+</html>

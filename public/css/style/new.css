@@ -1,0 +1,331 @@
+
+body, div, p, nav, a, li, h1{
+	 font-family: verdana, Times New Roman,  微軟正黑體; 
+	 color:#888;
+
+}
+p{
+		 text-align: left;
+}
+body#body{
+	background-color:#fff;
+}
+
+#myModal, #myModal2, #myModal3 {
+top:25%;
+outline: none;
+}
+
+footer#footer{
+	background-color: #f9f9f9;
+}
+/*canvas#mycanvas{
+	width:60%;
+	height:500px;
+	position:absolute;
+	background-color:#ddd;
+}*/
+div#aside div{
+	height:300px;
+	background-color:#ddd;
+	margin:0;
+	border-radius:15px;
+}
+div#byside div{
+	margin-left:10px;
+	height:300px;
+	background-color:#eee;
+	margin:0;
+	border-radius:15px;
+}
+div#section2{
+	background-color:#f8f8f8;
+	border-radius:8px;
+}
+
+#jumbotron{
+
+    /*background-image:url(img/pic1.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;*/
+	/*background:linear-gradient(to bottom right, #CC0000, #FF9900);
+	background:linear-gradient(to bottom right, #CC0000, #FF9900, #aa1122);
+	background:linear-gradient(to bottom right, #2e4057, #66a182, #caffb9, #aef78e, #c0d461);
+	background:linear-gradient(#2e4057, #66a182, #caffb9, #aef78e, #c0d461);
+	background:linear-gradient(to bottom right, #2e4057, #66a182);*/
+	animation: titleChange2 20s infinite;
+}
+div.jumbotron h1{
+	font-size:3.5vw;
+	color:#FFF;
+	padding: 5px;
+	opacity:0.85;
+
+}
+
+div.jumbotron h1 small{
+    font-size:2vw;
+	color:#AAA;
+}
+div.jumbotron div.col-xs-8{
+		animation: titleIn .7s 1;
+}
+#degree, #license, #autob{
+	height:300px;
+}
+#degree h4, #degree h3{
+	position:absolute;
+}
+h3#armylogo{
+	left:145px;
+}
+div.modal-body p {
+    text-indent: 28px;
+}
+
+div p#jumbo{
+	margin-top:100px;
+	background-color:#337;
+	color:#FFF;
+	opacity:0.9
+}
+img#myphoto{
+	float:left;
+	margin-right:20px;
+	left: 100px;
+
+}
+
+img#nculogo{
+	position:absolute;
+	left: 135px;
+	width:50px;
+	top:12px;
+	animation:fadeIn 1s 1;
+	transition:all .3s;
+}
+img#armylogo{
+	position:absolute;
+	left: 270px;
+	width:50px;
+	top:12px;
+	animation:fadeIn 1.1s 1 ;
+	transition:all .3s;
+}
+
+div#dashBorder{
+	border-right: dotted 1px;
+}
+div#dottedBorder{
+	border-left: dotted 1px;
+}
+img#nculogo:hover{
+	width:95px;
+	cursor:pointer;	
+	transform:  translate3d(-24px,-24px,100px);
+}
+img#armylogo:hover{
+	width:95px;
+	cursor:pointer;	
+	transform:  translate3d(-24px,-24px,100px);
+}
+
+img#cyculogo{
+	position:absolute;
+	left: 230px;
+	width:43px;
+	top:79px;
+	animation:fadeIn 1.2s 1 ;
+	transition: all .3s ;
+}
+img#cyculogo:hover{
+	width:80px;
+	cursor:pointer;
+	transform: translate3d(-16px,-16px,0px);
+	
+}
+iframe{
+	width:100%;
+	height:550px;
+	border-radius: 15px;
+	border:none;
+}
+iframe#loading{
+	position: absolute;
+	width:90%;
+	height:350px;
+	right:49px;
+	top:80px;
+}
+
+div#animation div#animation1{
+	height:450px;
+	width:90%;
+	background-color:#aaa;
+	margin-bottom:20px;
+	margin-top:20px;
+	animation: example 10s infinite;
+}
+div#animation div#animation2{
+	height:450px;
+	width:90%;
+	background-color:#aaa;
+	margin-bottom:20px;
+	margin-top:20px;
+	animation-name: example;
+    animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-delay: 1s;
+}
+div#animation div#animation3{
+	height:450px;
+	width:90%;
+	background-color:#aaa;
+	margin-bottom:20px;
+	margin-top:20px;
+	animation-name: example;
+    animation-duration: 10s;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+}
+div#animation div#animation4{
+	height:450px;
+	width:90%;
+	background-color:#aaa;
+	margin-bottom:20px;
+	margin-top:20px;
+	animation-name: example;
+    animation-duration: 10s;
+	animation-delay: 3s;
+	animation-iteration-count: infinite;
+}
+div#animation div#animation5{
+	height:450px;
+	width:90%;
+	background-color:#aaa;
+	margin-bottom:20px;
+	margin-top:20px;
+	animation-name: example;
+    animation-duration: 10s;
+	animation-delay: 4s;
+	animation-iteration-count: infinite;
+}
+div#animation div#animation6{
+	height:450px;
+	width:90%;
+	background-color:#aaa;
+	margin-bottom:20px;
+	margin-top:20px;
+	animation-name: example;
+    animation-duration: 10s;
+	animation-delay: 5s;
+	animation-iteration-count: infinite;
+}
+div#animation div#animation7{
+	height:450px;
+	width:90%;
+	background-color:#aaa;
+	margin-bottom:20px;
+	margin-top:20px;
+	animation-name: example;
+    animation-duration: 10s;
+	animation-delay: 6s;
+	animation-iteration-count: infinite;
+}
+div#animation div#animation8{
+	height:450px;
+	width:90%;
+	background-color:#aaa;
+	margin-bottom:20px;
+	margin-top:20px;
+	animation-name: example;
+    animation-duration: 10s;
+	animation-delay: 7s;
+	animation-iteration-count: infinite;
+}
+div#animation div#animation9{
+	height:450px;
+	width:90%;
+	background-color:#aaa;
+	margin-bottom:20px;
+	margin-top:20px;
+	animation-name: example;
+    animation-duration: 10s;
+	animation-delay: 8s;
+	animation-iteration-count: infinite;
+}
+div#animation div#animation10{
+	height:450px;
+	width:90%;
+	background-color:#aaa;
+	margin-bottom:20px;
+	margin-top:20px;
+	animation-name: example;
+    animation-duration: 10s;
+	animation-delay: 9s;
+	animation-iteration-count: infinite;
+}
+div#animation div#animation11{
+	height:450px;
+	width:90%;
+	background-color:#aaa;
+	margin-bottom:20px;
+	margin-top:20px;
+	animation-name: example;
+    animation-duration: 10s;
+	animation-delay: 10s;
+	animation-iteration-count: infinite;
+}
+div#animation div#animation12{
+	height:450px;
+	width:90%;
+	background-color:#aaa;
+	margin-bottom:20px;
+	margin-top:20px;
+	animation-name: example;
+    animation-duration: 10s;
+	animation-delay: 11s;
+	animation-iteration-count: infinite;
+}
+@keyframes example {
+    0%   {background-color: #aaa;height:450px}
+    25%  {background-color: #fff;height:350px}
+    50%  {background-color: #9ff;height:250px}
+    75%  {background-color: #333;height:150px}
+    100% {background-color: #aaa;height:450px}
+}@keyframes titleChange{
+    0%   {background-color: #2e4057;}
+	50%   {background-color: #66a182;}
+    100% {background-color: #2e4057;}
+}
+@keyframes titleChange2{
+    0%   {background-color: #82c9f3;}
+	50%   {background-color: #439f93;}
+    100% {background-color: #82c9f3;}
+}
+@keyframes titleIn{
+    0%   {left: 1400px;}
+	80%   {left: -40px;}
+    100% {left: 0px;}
+	animation-timing-function: ease-out;
+}
+
+@keyframes example2 {
+    0%   {background-color: red; left:0px; top:0px;}
+    25%  {background-color: yellow; left:200px; top:0px;}
+    50%  {background-color: blue; left:200px; top:200px;}
+    75%  {background-color: green; left:0px; top:200px;}
+    100% {background-color: red; left:0px; top:0px;}
+}
+@keyframes imageEnlarge {
+    0%   {width:50px}
+    100%  {width:80px;}
+}
+@keyframes fadeIn{
+    0%   {opacity:0.1;}
+    100%  {opacity:1;}
+}
+
+
+
+

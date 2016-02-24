@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Retirement Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script>
+	function count(){
+	  var mon_exp = document.getElementById("month-exp").value;
+	  var span_y  = document.getElementById("span-y").value;
+	  var infla_rate = document.getElementById("infla-rate").value;
+	  var total = mon_exp * 12 * span_y * Math.pow((infla_rate), span_y)  ;
+	  document.getElementById("total").value =
+	  "$" + total.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+	
+	</script>
+	<style>
+	body{
+		background-color:rgba(200, 54, 54, 0);
+	}
+	h2{
+	  width:100%;
+	  color:#555;
+	}
+	input, select{
+	  max-width:300px;
+	 }
+	 hr{
+	  max-width: 300px;
+	 }
+	 label{
+	   width:300px;
+	   text-align:left;
+	   padding:10px;
+	 }
+     div#calculator{
+     	background-color:rgba(239, 239, 239, 0.6);
+     	border-radius: 10px;
+     	padding-bottom: 30px;
+     }
+     img#save{
+     	height:480px;
+     	left:50px;
+     }
+	 
+	</style>
+  </head>
+  <body>
+  	<div class="container" align="center">
+	<h2>Retirement Calculator</h2>
+	<hr>
+	<div id="calculator">
+	    <form role="form">
+	      <div  class="form-group " align="center">
+	        <label for="month-exp">Monthly expected expenditure:</label>
+		    <input class="form-control" type="text" id="month-exp" onchange="count();"placeholder="Pleas enter a number">
+	        <label for="span-y">Life-span expectation(year):</label>
+		    <input class="form-control" type="text" id="span-y" onchange="count();" placeholder="Pleas enter a number">
+	        <label for="span-y">estimated yearly inflation rate:</label>
+		    <select class="form-control" id="infla-rate" onchange="count();">
+		      <option value = 1.00>0%</option>
+		      <option value = 1.01>1%</option>
+              <option value = 1.02>2%</option>
+              <option value = 1.03>3%</option>
+              <option value = 1.04>4%</option>
+		      <option value = 1.05>5%</option>
+		      <option value = 1.06>6%</option>
+	    	</select>
+	        <hr align="center">
+	        <label for="total">Yor will need:</label>
+		    <input class="form-control" type="text" id="total" style="cursor:pointer" value="$0.00" disabled>
+	      </div>    
+	    </form>
+	 </div>
+	</div>
+  </body>
+</html>

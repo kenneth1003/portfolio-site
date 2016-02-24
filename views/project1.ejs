@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>張柏堅</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="CSS/new.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="JavaScript/forProject.js"></script>
+    <script src="JavaScript/myJS.js"></script>
+  </head>
+
+  <body id="body">
+
+
+
+<!-- ========== I'm NAVBAR ==========  -->
+    <nav id="navBar"class="navbar navbar-default navbar-static-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">張柏堅</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+
+          <ul class="nav navbar-nav">
+            
+            <li><a href="/"><i class="fa fa-home fa-fw"></i>首頁</a></li>
+            
+            <li><a href="resume"><i class="fa fa-graduation-cap fa-fw"></i>履歷自傳</a></li>
+            
+            <li class="active"><a href="#" ><i class="fa fa-picture-o fa-fw"></i>作品專區</a></li>
+            
+            <li><a href="guest"><i class="fa fa-comments-o fa-fw"></i>訪客留言</a></li>
+          
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            
+            <li><a href="#" data-toggle="popover" data-placement="bottom" data-trigger="click" data-content="kenneth06201003@gmail.com"><i class="fa fa-envelope fa-lg"></i></a></li>
+
+            <li><a href="https://www.facebook.com/profile.php?id=1815722997" target="_blank"><i class="fa fa-facebook-f fa-lg"></i></a></li>
+            
+            <li><a href="https://www.linkedin.com/profile/view?id=AAMAABdAN5MBo4O_cdetVvPDk9hQnXs2Tm602fA&trk=hp-identity-name" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a></li>
+           
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+<!-- ========== I'm JUMBOTRON ========== -->
+    <div class="container">
+      <div class="jumbotron" id="jumbotronPro">
+        <div class="row">
+          <div class="col-xs-3 myphoto">
+            <img id="myphoto" src="img/myphoto2.jpg" class="img-thumbnail img-rounded"></img>
+          </div>
+          <div class='col-xs-12 col-sm-8' style="text-align:center">
+            <h1><b>追求卓越</b></h1> <h1><b>成功隨之而來</b></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<!-- ========== CONTENT ========== -->
+    <div class="container" align="center">
+      <div class="col-xs-12">
+        <p class="projectIns" style="text-align:center">這些是我實作出來的小小應用，由於學習的時間不長，所以作品不多，但我相信在外來我能做出更多更有趣、實用的作品。</p>
+      </div>
+
+
+      <div class="col-lg-2 col-lg-offset-1 col-xs-4">
+        <button id="btnCal" type="button" class="btn btn-info project">退休計算機</button>
+      </div>
+
+      <div class="col-lg-2 col-xs-4">
+        <button id="btnTimer" type="button" class="btn btn-primary project">工作計時器</button>
+      </div>
+      <div class="col-lg-2 col-xs-4">
+        <button id="btnQuote" type="button" class="btn btn-success project">佳句產生器</button>
+      </div>
+      <div class="col-lg-2 col-xs-6">
+        <button id="btnTic" type="button" class="btn btn-warning project">圈圈叉叉</button>
+      </div>
+            <div class="col-lg-2 col-xs-6">
+       <a id="btnLogin" type="button" class="btn btn-danger project">會員登入</a>
+      </div>
+      <br>
+
+
+
+<!-- ========== iFRAME ========== -->
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <div style="overflow:hidden">
+          <iframe id="loading" src="" style="display:true"></iframe>
+        </div>
+
+        <div class="calculator1" style="display:none">
+          <p style="text-align:center">輸入每月預期支出、退休後餘年和預期通貨膨脹率，就可以算出該存多少錢來支應退休後的生活！</p>
+        </div>
+        <iframe class="calculator1" src="" style="display:none"></iframe>
+
+
+        <div class="timer" style="display:none">
+            <p style="text-align:center">這個小時鐘可以設定工作每隔多少分鐘就休息多少分鐘，時間到會有音效提示，一起享受健康快樂的辦公室生活吧！</p>
+        </div>
+        <iframe class="timer" src="" style="display:none"></iframe>
+
+
+        <div class="quote" style="display:none">
+          <p style="text-align:center">有時對人生感到迷惘或覺得生活不順遂嗎？只要點擊按鈕就能隨機產生出激勵人心的名言佳句</p>
+        </div>
+        <iframe class="quote" src="" style="display:none"></iframe>
+
+
+        <div class="tic" style="display:none">
+          <p style="text-align:center">很久沒玩圈圈叉叉了嗎？來挑戰一下電腦吧！</p>
+        </div>
+        <iframe class="tic" src="" style="display:none"></iframe>
+
+
+        <div class="login" style="display:none">
+          <p style="text-align:center">這是個本地以及社群網站的登入實作，登入回會顯示會員簡單的個人資訊</p>
+          <a href="/auth/index" target="_blank">click me!</a>
+        </div>
+        <!--<iframe class="login" src="" style="display:none"></iframe>-->
+      </div>
+    </div>
+  </body>
+</html>

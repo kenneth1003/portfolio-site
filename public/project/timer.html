@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<style type="text/css">
+	body{
+  background-color:rgba(239, 239, 239, 0.6);
+}
+#minus{
+  cursor:pointer;
+  margin:12px
+}
+#plus{
+  cursor:pointer;
+  margin:12px
+}
+#work-time, #break-time{
+  padding:20px;
+  border:solid 2px #bbbbbb;
+  border-radius:30px;
+}
+span{
+
+  font-size:30px
+}
+p{
+  font-size:40px;
+}
+#pro-bar{
+  height:50px;
+}
+h2 {
+  display: block;
+  margin: 0 auto;
+  color: #999;
+  text-align: center;
+  font-family: 'Pacifico';
+  font-size: 9vw;
+}
+h3{
+  font-size:4vw;
+}
+	</style>
+</head>
+<body>
+</br></br>
+<div class="container" align="center">
+  <h2>Healthy work style!</h2>
+    
+  <div class="col-sm-6 col-lg-3 col-lg-offset-3 col-xs-12">
+    <h3>Break Time(mins)</h3><br>
+    <button class="btn btn-sm btn-default"id="minus"onclick="breakTimeMinus()">-</button><span id="break-time">5</span><button class="btn btn-default btn-sm"id="plus" onclick="breakTimePlus()">+</button>
+  </div>   
+  <div class="col-sm-6 col-lg-3 col-xs-12">
+    <h3>Work Time(mins)</h3><br>
+    <button class="btn btn-sm btn-default"id="minus"onclick="workTimeMinus()">-</button><span id="work-time">20</span><button class="btn btn-default btn-sm"id="plus" onclick="workTimePlus()">+</button>
+    
+  </div>
+  <br>
+  <div class="btn-group">
+  <div style="margin-top:30px"class="col-xs-12 col-lg-6 col-lg-offset-3">
+  <button id="start"class="btn btn-md btn-default" onclick="myFunc1()"><i class="fa fa-play fa-fw"></i> START&nbsp;</button>
+  <button id="pause"class="btn btn-md btn-default" onclick="pause()"disabled><i class="fa fa-pause fa-fw"></i> PAUSE&nbsp;</button>
+  <button id="resume" class="btn btn-md btn-default" onclick="resum()"disabled><i class="fa fa-step-forward fa-fw"></i> RESUME</button>
+  <button id="reset" class="btn btn-md btn-default btn-danger" onclick="reset()"disabled><i class="fa fa-circle fa-fw"></i> RESET&nbsp;</button>
+</div>
+    <div style="display:inline">  <br><br>
+      <p style="display:inline"id="timer-m">00</p><p style="display:inline">:</p><p style="display:inline" id="timer-s">00</p>
+    </div>
+  </div>
+  <div class="col-xs-10 col-xs-offset-1 col-lg-6 col-lg-offset-3">
+    <div class="progress">
+      <div id="pro-bar" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:100%" onclick="1">
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+var clear1;
+var clear2;
+var clear3; 
+//above for pause
+var resume; 
+var total_T;
+var wav = 'http://www.oringz.com/oringz-uploads/sounds-948-just-like-magic.mp3';
+var audio = new Audio(wav);
+
+//work time clock
+function myFunc1(){
+  var a = setInterval(function(){countDown1()},1000);
+  var s = $('#work-time').html();
+      s = parseInt(s) * 60;
+  var total = s;
+  total_T = total;
+  clear1 = function stop1(){
+    clearInterval(a);
+  }
+  document.getElementById('pro-bar').className = "progress-bar progress-bar-danger";
+  document.getElementById('start').disabled = true;
+  document.getElementById('resume').disabled = true;
+  document.getElementById('reset').disabled = true;
+  document.getElementById('pause').disabled = false;
+  document.getElementById('timer-s').innerHTML = "00";
+  document.getElementById('timer-m').innerHTML = s / 60;
+  
+  function countDown1(){  
+    s -= 1;
+    resume = s;
+    document.getElementById('pro-bar').style.width = 100 * (s / total) + '%';
+    if(s % 60 < 10){
+      document.getElementById('timer-s').innerHTML = "0" + s % 60;
+    }else{
+      document.getElementById('timer-s').innerHTML = s % 60 ;
+    }
+    document.getElementById('timer-m').innerHTML = Math.floor(s /60);
+    if(s == 0){
+      audio.play();
+      clearInterval(a);
+      myFunc2();
+    }
+  }
+}
+
+
+
+
+
+
+
+//--break time clock--//
+function myFunc2(){
+  var a = setInterval(function(){countDown1()},1000);
+  var s = document.getElementById('break-time').innerHTML;
+      s = parseInt(s) * 60;
+  var total = s;
+  clear3 = function stop3(){
+    clearInterval(a);
+  }
+  document.getElementById('timer-s').innerHTML = "00";
+  document.getElementById('timer-m').innerHTML = s / 60;
+  document.getElementById('pro-bar').className = 'progress-bar';
+  function countDown1(){  
+    s -= 1;
+    resume = s;
+    document.getElementById('pro-bar').style.width = 100 * (1- (s / total)) + '%';
+    if(s % 60 < 10)
+    {document.getElementById('timer-s').innerHTML = "0" + s % 60;}
+    else
+    {document.getElementById('timer-s').innerHTML = s % 60 ;}
+    document.getElementById('timer-m').innerHTML = Math.floor(s /60);
+    if(s == 0){
+      audio.play();
+      clearInterval(a);
+      myFunc1();
+    } 
+  }   
+}
+
+
+
+
+
+
+
+//--resume--//
+function resum(){
+  var a = setInterval(function(){countDown1()},1000);
+  var s = resume;
+  total = total_T;
+  clear2 = function stop2(){
+    clearInterval(a);
+  }
+  document.getElementById('start').disabled = true;
+  document.getElementById('resume').disabled = true;
+  document.getElementById('reset').disabled = true;
+  document.getElementById('pause').disabled = false;
+  function countDown1(){  
+    s -= 1;
+    resume = s;
+    if(document.getElementById('pro-bar').className == "progress-bar progress-bar-danger"){
+    document.getElementById('pro-bar').style.width = 100 * (s / total) + '%';
+    }else{
+    document.getElementById('pro-bar').style.width = 100 * (1- (s / total)) + '%';
+    }
+    if(s % 60 < 10){
+      document.getElementById('timer-s').innerHTML = "0" + s % 60;
+    }else{
+      document.getElementById('timer-s').innerHTML = s % 60 ;
+    }
+    document.getElementById('timer-m').innerHTML = Math.floor(s /60);
+    if(s == 0){
+      audio.play();
+      clearInterval(a);
+      if(document.getElementById('pro-bar').className == "progress-bar progress-bar-danger"){
+        myFunc2();
+      }else{
+        myFunc1();
+      }
+    }     
+  }    
+}
+
+
+
+
+
+
+function pause(){
+  clear1();
+  document.getElementById('resume').disabled = false;
+  document.getElementById('reset').disabled = false;
+  document.getElementById('pause').disabled = true;
+  if(clear3){
+    clear3();
+    clear2();
+  }
+  if(clear2){
+    clear2();
+    clear3();
+  }
+}
+
+
+
+function reset(){
+  s = 0;
+  total = 0.001;
+  document.getElementById('start').disabled = false;
+  document.getElementById('resume').disabled = true;
+  document.getElementById('reset').disabled = true;
+  document.getElementById('pause').disabled = true;
+  document.getElementById('pro-bar').className = "progress-bar progress-bar-danger";
+  document.getElementById('timer-s').innerHTML = "00";
+  document.getElementById('timer-m').innerHTML = s / 60;
+  document.getElementById('pro-bar').style.width = 100 + '%';
+  //document.getElementById('work-time').innerHTML = 20;
+  //document.getElementById('break-time').innerHTML = 5;
+  clear2();
+  clear1();
+  clear3();
+}
+
+
+
+
+  
+//--Time plus and minus--//
+function breakTimePlus(){
+  var t = document.getElementById('break-time').innerHTML;
+  t = parseInt(t) + 1;
+  document.getElementById('break-time').innerHTML = t;
+}
+function breakTimeMinus(){
+  var t = document.getElementById('break-time').innerHTML;
+  t = parseInt(t) - 1;
+  if(t > 0){
+  document.getElementById('break-time').innerHTML = t;
+  }
+}
+function workTimePlus(){
+  var t = document.getElementById('work-time').innerHTML;
+  t = parseInt(t) + 1;
+  document.getElementById('work-time').innerHTML = t;
+}
+function workTimeMinus(){
+  var t = document.getElementById('work-time').innerHTML;
+  t = parseInt(t) - 1;
+  if(t > 0){
+  document.getElementById('work-time').innerHTML = t;
+  }
+}
+
+
+
+</script>
+</html>

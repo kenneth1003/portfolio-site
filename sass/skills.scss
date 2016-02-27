@@ -23,6 +23,11 @@
 	&.grow h3{color: $h3_2;border-left: 3px solid $h3_2;padding-left: 8px}
 	&.char h3{color: $h3_3;border-left: 3px solid $h3_3;padding-left: 8px}
 	&.future h3{color: $h3_4;border-left: 3px solid $h3_4;padding-left: 8px}
+	// numbers behind is for ordering
+	&.right--animation-1 {position: relative; right: 20%;opacity: 0;transition: all .6s}
+	&.right--animation-3 {position: relative; right: 20%;opacity: 0;transition: all .6s}
+	&.left--animation-2 {position: relative; left: 20%;opacity: 0;transition: all .6s}
+	&.left--animation-4 {position: relative; left: 20%;opacity: 0;transition: all .6s}
 }
 .intro-box p{
 	text-indent: 28px;

@@ -18,31 +18,28 @@
   font-size: 16px;
   border-bottom: 1px dotted #aaa; }
 
-.intro-box h3 {
-  margin-top: 5px; }
-
-.intro-box.exp h3 {
-  color: #2196F3;
-  border-left: 3px solid #2196F3;
-  padding-left: 8px; }
-
-.intro-box.grow h3 {
-  color: #4CAF50;
-  border-left: 3px solid #4CAF50;
-  padding-left: 8px; }
-
-.intro-box.char h3 {
-  color: #FF9800;
-  border-left: 3px solid #FF9800;
-  padding-left: 8px; }
-
-.intro-box.future h3 {
-  color: #D32F2F;
-  border-left: 3px solid #D32F2F;
-  padding-left: 8px; }
-
-.intro-box .exp ul {
-  font-size: 20px; }
+.intro-box {
+  display: none; }
+  .intro-box h3 {
+    margin-top: 5px; }
+  .intro-box.exp h3 {
+    color: #2196F3;
+    border-left: 3px solid #2196F3;
+    padding-left: 8px; }
+  .intro-box.grow h3 {
+    color: #4CAF50;
+    border-left: 3px solid #4CAF50;
+    padding-left: 8px; }
+  .intro-box.char h3 {
+    color: #FF9800;
+    border-left: 3px solid #FF9800;
+    padding-left: 8px; }
+  .intro-box.future h3 {
+    color: #D32F2F;
+    border-left: 3px solid #D32F2F;
+    padding-left: 8px; }
+  .intro-box .exp ul {
+    font-size: 20px; }
 
 .intro-box p {
   text-indent: 28px;

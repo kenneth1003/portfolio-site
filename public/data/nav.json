@@ -1,0 +1,35 @@
+{
+	"en":{
+
+	},
+	"ch":{
+		"about": {
+			"one":{
+				"title": "自傳簡歷",
+				"href" : "/profile"
+			},			
+			"two":{
+				"title": "技能專長",
+				"href" : "/skills"
+			},			
+			"three":{
+				"title": "我的作品",
+				"href" : "/portfolio"
+			}
+		},
+		"record":{
+			"one":{
+				"title": "個人",
+				"href": "#"
+			},
+			"two":{
+				"title": "工作",
+				"href" : "#"
+			},			
+			"three":{
+				"title": "其他",
+				"href" : "#"
+			}
+		}
+	}
+}

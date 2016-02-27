@@ -13,3 +13,12 @@ body {
   max-width: 900px;
   margin: 0 auto;
   padding: 15px; }
+
+.dropdown-menu > li > a {
+  padding: 10px 20px; }
+
+.active {
+  background-color: #ddd; }
+
+.active:hover {
+  background-color: #ddd !important; }

@@ -12,10 +12,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
     <script src="javascript/app.js"></script>
     <style type="text/css">
-      .index-perface{margin-top: 20%;max-width: 300px;}
+      .index-perface{margin-top: 20%;max-width: 300px;display: none}
     </style>
   </head>
   <body ng-app="mainApp">
@@ -28,4 +31,7 @@
 </div>
 
   </body>
+  <script type="text/javascript">
+      setTimeout(function(){$('.index-perface').fadeIn(800)}, 800)
+  </script>
 </html>

@@ -12,6 +12,12 @@
 		})
 	}])
 	app.controller('portfolioCtrl', ['$scope', '$http', function ($scope, $http) {
+		$scope.bg = 999;
+		$scope.setLink = function(link, bg){
+			$scope.link = link;
+			$scope.bg   = bg;
+			console.log(bg)
+		}
 		$http({method:'GET', url: '../data/portfolio.json'}).then(function success(data){
 			$scope.work = data.data.ch.work;
 			$scope.practice = data.data.ch.practice;

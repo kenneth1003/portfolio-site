@@ -20,9 +20,9 @@
 		},
 		"practice":{
 			"p1":{
-				"name": "project1",
-				"href": "#4",
-				"desc": "this is project4",
+				"name": "calculator",
+				"href": "project/calculator.html",
+				"desc": "this is a calculator",
 				"img": "123"					
 			},			"p2":{
 				"name": "project2",

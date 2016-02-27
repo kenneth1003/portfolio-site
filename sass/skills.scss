@@ -1,4 +1,5 @@
 @import "utils/variables";
+$animation-time : .4s;
 .num-instruction{
 	color:#888;
 	margin-top: 15px;
@@ -24,10 +25,10 @@
 	&.char h3{color: $h3_3;border-left: 3px solid $h3_3;padding-left: 8px}
 	&.future h3{color: $h3_4;border-left: 3px solid $h3_4;padding-left: 8px}
 	// numbers behind is for ordering
-	&.right--animation-1 {position: relative; right: 20%;opacity: 0;transition: all .6s}
-	&.right--animation-3 {position: relative; right: 20%;opacity: 0;transition: all .6s}
-	&.left--animation-2 {position: relative; left: 20%;opacity: 0;transition: all .6s}
-	&.left--animation-4 {position: relative; left: 20%;opacity: 0;transition: all .6s}
+	&.right--animation-1 {position: relative; right: 20%;opacity: 0;transition: all $animation-time}
+	&.right--animation-3 {position: relative; right: 20%;opacity: 0;transition: all $animation-time}
+	&.left--animation-2 {position: relative; left: 20%;opacity: 0;transition: all $animation-time}
+	&.left--animation-4 {position: relative; left: 20%;opacity: 0;transition: all $animation-time}
 }
 .intro-box p{
 	text-indent: 28px;

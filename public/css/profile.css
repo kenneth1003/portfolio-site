@@ -1,1 +1,81 @@
-.top-box{margin-top:21px;overflow:auto}.head-shot{width:100%}.head-shot-box{padding-left:0}.profile-list{list-style:none;margin-top:40px;padding-right:0}.profile-list li{padding:12px 5px;font-size:16px;border-bottom:1px dotted #aaa}.intro-box h3{margin-top:5px}.intro-box.exp h3{color:#2196f3;border-left:3px solid #2196f3;padding-left:8px}.intro-box.grow h3{color:#4caf50;border-left:3px solid #4caf50;padding-left:8px}.intro-box.char h3{color:#ff9800;border-left:3px solid #ff9800;padding-left:8px}.intro-box.future h3{color:#d32f2f;border-left:3px solid #d32f2f;padding-left:8px}.intro-box .exp ul{font-size:20px}.intro-box p{text-indent:28px;line-height:2.2}.intro-box{box-shadow:1px 3px 5px #e5e5e5;border:1px solid #ddd;padding:15px;margin:20px 0;overflow:hidden}.title{font-size:16px;font-style:italic}.since{color:#999;font-size:12px;float:right;padding:5px 15px 0}.since--now{padding:5px 44px 0}.logo{width:36px}@media(max-width:768px){.top-box{margin-top:0}.top-box img{display:none}.profile-list{margin-top:0;padding-left:10px}}
+.top-box {
+  margin-top: 21px;
+  overflow: auto; }
+
+.head-shot {
+  width: 100%; }
+
+.head-shot-box {
+  padding-left: 0; }
+
+.profile-list {
+  list-style: none;
+  margin-top: 40px;
+  padding-right: 0; }
+
+.profile-list li {
+  padding: 12px 5px;
+  font-size: 16px;
+  border-bottom: 1px dotted #aaa; }
+
+.intro-box h3 {
+  margin-top: 5px; }
+
+.intro-box.exp h3 {
+  color: #2196F3;
+  border-left: 3px solid #2196F3;
+  padding-left: 8px; }
+
+.intro-box.grow h3 {
+  color: #4CAF50;
+  border-left: 3px solid #4CAF50;
+  padding-left: 8px; }
+
+.intro-box.char h3 {
+  color: #FF9800;
+  border-left: 3px solid #FF9800;
+  padding-left: 8px; }
+
+.intro-box.future h3 {
+  color: #D32F2F;
+  border-left: 3px solid #D32F2F;
+  padding-left: 8px; }
+
+.intro-box .exp ul {
+  font-size: 20px; }
+
+.intro-box p {
+  text-indent: 28px;
+  line-height: 2.2; }
+
+.intro-box {
+  box-shadow: 1px 3px 5px #e5e5e5;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 20px 0;
+  overflow: hidden; }
+
+.title {
+  font-size: 16px;
+  font-style: italic; }
+
+.since {
+  color: #999;
+  font-size: 12px;
+  float: right;
+  padding: 5px 15px 0; }
+
+.since--now {
+  padding: 5px 44px 0; }
+
+.logo {
+  width: 36px; }
+
+@media (max-width: 768px) {
+  .top-box {
+    margin-top: 0; }
+    .top-box img {
+      display: none; }
+  .profile-list {
+    margin-top: 0;
+    padding-left: 10px; } }

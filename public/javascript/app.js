@@ -12,7 +12,7 @@
 		})
 	}])
 	app.controller('portfolioCtrl', ['$scope', '$http', function ($scope, $http) {
-		$scope.bg = 999;
+		$scope.bg = 99;
 		$scope.setLink = function(link, bg){
 			$scope.link = link;
 			$scope.bg   = bg;

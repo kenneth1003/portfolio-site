@@ -20,11 +20,13 @@
 		},
 		"practice":{
 			"p1":{
+				"id"  : 1,
 				"name": "calculator",
 				"href": "project/calculator.html",
 				"desc": "this is a calculator",
 				"img": "123"					
 			},			"p2":{
+				"id"  : 2,
 				"name": "project2",
 				"href": "#4",
 				"desc": "this is project4",
@@ -35,36 +37,44 @@
 				"desc": "this is project4",
 				"img": "123"					
 			},			"p4":{
+				"id"  : 3,
 				"name": "project4",
 				"href": "#4",
 				"desc": "this is project4",
 				"img": "123"					
 			},			"p4":{
+				"id"  : 4,
 				"name": "project5",
 				"href": "#4",
 				"desc": "this is project4",
 				"img": "123"					
 			},			"p5":{
+				"id"  : 5,
 				"name": "project6",
 				"href": "#4",
 				"desc": "this is project4",
 				"img": "123"					
 			},			"p6":{
+				"id"  : 6,
 				"name": "project7",
 				"href": "#4",
 				"desc": "this is project4",
 				"img": "123"					
 			},			"p7":{
+				"id"  : 7,
 				"name": "project8",
 				"href": "#4",
 				"desc": "this is project4",
-				"img": "123"					
+				"img": "123"	
+							
 			},			"p7":{
+				"id"  : 8,	
 				"name": "project9",
 				"href": "#4",
 				"desc": "this is project4",
 				"img": "123"					
 			},			"p8":{
+				"id"  : 9,
 				"name": "project10",
 				"href": "#4",
 				"desc": "this is project4",

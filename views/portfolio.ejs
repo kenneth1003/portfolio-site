@@ -45,15 +45,16 @@
       </md-tab>
       <md-tab label="練習小品">
         <md-content class="md-padding pure-g">
-           <div class="single-page practice pure-u-sm-1-12 pure-u-md-1-12" ng-repeat="po in practice track by po.id" data-desc="{{po.desc}}" ng-click="setLink(po.href, $index)">
-            <div class="bg"></div>
+           <div class="single-page practice pure-u-sm-1-12 pure-u-md-1-12" ng-repeat="po in practice track by po.id" data-desc="{{po.desc}}" ng-click="setLink(po.href, $index, po.desc)">
+            <div class="bg" style="background: url('{{po.img}}') 50% 50% no-repeat;background-size: cover;"></div>
             <div class="mask mask--gradient" ng-class="{bgz: bg === $index}"></div>
             <p class="practice-name">{{po.name}}</p>
             <p class="practice-name">{{po.$$hashKey}}</p>
             <p class="practice-name" ng-bind="po.$$hashKey"></p>
           </div>
-          <div class="practice__description">{{po.desc}}</div>
+          <div class="practice__description--alias">{{desc}}</div>
           <iframe id="js-iframe" class="my-iframe" src="{{link}}"></iframe>
+
         </md-content>
       </md-tab>
       <md-tab label="其他">

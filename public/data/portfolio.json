@@ -8,77 +8,53 @@
 			"p1":{
 				"name": "關島之家-關島婚禮",
 				"href": "http://wedding.guam.com.tw/",
-				"desc": "此為個人依設計師需求所切之網頁，",
+				"desc": "此為個人依設計師需求所切之網頁，此旅遊網站也由我負責部份的維護。",
 				"img": "img/rsz_pw001.jpg"	
 			},
 			"p2":{
 				"name": "awoo SEO工具",
 				"href": "https://www.awoo.org/",
-				"desc": "縮圖為\"天下無狗\"關鍵字工具頁面(需有會員才能使用)，除了\"球來就打\"頁面為另一位前端切版，其餘皆為個人依設計師需求所切之版面，包含首頁的產品故事、以及\"How It Works\"",
+				"desc": "縮圖為\"天下無狗\"關鍵字工具頁面(需有會員才能使用)，除了\"球來就打\"頁面為另一位前端切版，其餘皆為個人依設計師需求所切之版面，包含首頁的產品故事、以及\"How It Works\"。",
 				"img": "img/rsz_pw002-1.jpg"
+			},
+			"p3":{
+				"name": "Dreamtek",
+				"href": "http://rocky-dusk-7171.herokuapp.com/test1/dreamtek/home.html",
+				"desc": "此為個人初次接案的成品，由於尚未上線，頁面為個人測試空間，首次讀取時間會稍微慢一些。",
+				"img": "img/rsz_pw003.jpg"
 			}
 		},
 		"practice":{
 			"p1":{
 				"id"  : 1,
-				"name": "calculator",
+				"name": "退休計算機",
 				"href": "project/calculator.html",
-				"desc": "this is a calculator",
-				"img": "123"					
+				"desc": "到底要存多少錢才能夠退休呢？讓我們繼續看下去...",
+				"img": "img/practice/001.jpeg"					
 			},			"p2":{
 				"id"  : 2,
-				"name": "project2",
-				"href": "#4",
-				"desc": "this is project4",
-				"img": "123"					
+				"name": "圈圈叉叉",
+				"href": "project/tic.html",
+				"desc": "我是AlphaGo的兄弟，來挑戰一下吧！",
+				"img": "img/practice/002.jpg"					
 			},			"p3":{
-				"name": "project3",
-				"href": "#4",
-				"desc": "this is project4",
-				"img": "123"					
-			},			"p4":{
 				"id"  : 3,
-				"name": "project4",
-				"href": "#4",
-				"desc": "this is project4",
-				"img": "123"					
+				"name": "名言產生器",
+				"href": "project/quote.html",
+				"desc": "這些名言佳句，你看過幾個？",
+				"img": "img/practice/003.jpeg"					
 			},			"p4":{
 				"id"  : 4,
-				"name": "project5",
-				"href": "#4",
-				"desc": "this is project4",
-				"img": "123"					
+				"name": "函數檢查器",
+				"href": "project/quote.html",
+				"desc": "此為個人用於觀察演算法在不同樣本時特性所開發的工具，雖然函數都改過了，但還是來玩玩看吧！",
+				"img": "img/practice/004.jpeg"					
 			},			"p5":{
 				"id"  : 5,
-				"name": "project6",
-				"href": "#4",
-				"desc": "this is project4",
-				"img": "123"					
-			},			"p6":{
-				"id"  : 6,
-				"name": "project7",
-				"href": "#4",
-				"desc": "this is project4",
-				"img": "123"					
-			},			"p7":{
-				"id"  : 7,
-				"name": "project8",
-				"href": "#4",
-				"desc": "this is project4",
-				"img": "123"	
-							
-			},			"p7":{
-				"id"  : 8,	
-				"name": "project9",
-				"href": "#4",
-				"desc": "this is project4",
-				"img": "123"					
-			},			"p8":{
-				"id"  : 9,
-				"name": "project10",
-				"href": "#4",
-				"desc": "this is project4",
-				"img": "123"					
+				"name": "D3圖表",
+				"href": "project/quote.html",
+				"desc": "此為公司某項收費工具所使用的圖表整理，用以展示D3學習的成果",
+				"img": "img/practice/005.jpg"					
 			}
 		}	
 	}

@@ -15,7 +15,7 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('sass', function() {
     return gulp.src("sass/*.scss")
         .pipe(sass())
-        //.pipe(uglifycss())
+        .pipe(uglifycss())
         .pipe(gulp.dest("public/css"));
 });
 

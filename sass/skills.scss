@@ -9,11 +9,13 @@ $animation-time : .4s;
 .num-ins-toggle{
 	cursor: pointer;
 	padding: 5px 15px;
-    border: 1px #999 solid;
+    border: 1px #999 dashed;
     border-radius: 3px;
-    transition: all .2s;
+    transition: all .3s;
     &:hover{
-    	background-color: #eee;
+    	color: #fff;
+    	background-color: #666;
+    	border: 1px #999 solid;
     }
 }
 .intro-box{

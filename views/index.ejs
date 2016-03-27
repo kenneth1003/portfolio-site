@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/profile.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="javascript/jquery.requestAnimationFrame.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
@@ -18,15 +19,16 @@
     <script src="//ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
     <script src="javascript/app.js"></script>
     <style type="text/css">
-      .main-container{padding:0;position: relative;}
+      .main-container{padding:0;position: relative;perspective: 200px}
       .navbar.navbar-default.navbar-static-top{margin: 0}
-      .index-perface{margin-top: 15px; max-width: 300px;display: none;position: relative;bottom:300px;transition: bottom 1.2s}
+      .index-perface{margin-top: 15px; max-width: 300px;display: none;position: relative;bottom:0;transition: bottom .7s}
       .index-bg{
         background: url('img/index-bg.jpg');
         background-size: cover;
         opacity: 0;
         min-height: 500px;
-        transition: opacity 2s}
+        transform: rotateY(3.5deg);
+        transition: all 2s}
     </style>
   </head>
   <body ng-app="mainApp">
@@ -43,8 +45,9 @@
   <script type="text/javascript">
   $(document).ready(function(){
     $('.index-perface').delay(500).fadeIn(800);
-    setTimeout(function(){ $('.index-perface').css('bottom', 0)}, 1100)
-    setTimeout(function(){ $('.index-bg').css('opacity', 1)}, 2000)
+    //setTimeout(function(){ $('.index-perface').css('bottom', 0)}, 1400)
+    setTimeout(function(){ $('.index-bg').css('opacity', 1)}, 1300)
+    setTimeout(function(){ $('.index-bg').css('transform', 'rotateY(0deg)')}, 1000)
   })
   </script>
 </html>

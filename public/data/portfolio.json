@@ -46,13 +46,13 @@
 			},			"p4":{
 				"id"  : 4,
 				"name": "函數檢查器",
-				"href": "project/quote.html",
+				"href": "project/function-checker.html",
 				"desc": "此為個人用於觀察演算法在不同樣本時特性所開發的工具，雖然函數都改過了，但還是來玩玩看吧！",
 				"img": "img/practice/004.jpeg"					
 			},			"p5":{
 				"id"  : 5,
 				"name": "D3圖表",
-				"href": "project/quote.html",
+				"href": "project/d3-chart.html",
 				"desc": "此為公司某項收費工具所使用的圖表整理，用以展示D3學習的成果",
 				"img": "img/practice/005.jpg"					
 			}

@@ -5,22 +5,21 @@
 	"ch":{
 		"work":{
 
-			"p1":{
-				"name": "關島之家-關島婚禮",
-				"href": "http://wedding.guam.com.tw/",
-				"desc": "此為個人依設計師需求所切之網頁，此旅遊網站也由我負責部份的維護。",
-				"img": "img/rsz_pw001.jpg"	
-			},
+
 			"p2":{
 				"name": "awoo SEO工具",
+				"en_name": "awoo SEO tool",
 				"href": "https://www.awoo.org/",
 				"desc": "縮圖為\"天下無狗\"關鍵字工具頁面(需有會員才能使用)，除了\"球來就打\"頁面為另一位前端切版，其餘皆為個人依設計師需求所切之版面，包含首頁的產品故事、以及\"How It Works\"。",
+				"en_desc": "All the page is done by me, except for '球來就打'(https://www.awoo.org/poa)",
 				"img": "img/rsz_pw002-1.jpg"
 			},
 			"p3":{
 				"name": "Dreamtek",
+				"en_name": "Dreamtek",
 				"href": "http://rocky-dusk-7171.herokuapp.com/test1/dreamtek/home.html",
 				"desc": "此為個人初次接案的半成品(尚使用假資料)，由於尚未上線，頁面為個人測試空間，首次讀取時間會稍微慢一些。",
+				"en_desc": "half-done project, it is visually completed, information on the site is still fake. Using sass for styling and Angular as front-end framework",
 				"img": "img/rsz_pw003.jpg"
 			}
 		},

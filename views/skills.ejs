@@ -16,22 +16,38 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
-
+    <script src="javascript/angular-route.js"></script>
     <script src="javascript/app.js"></script>
+    <style type="text/css">
+     .ng-cloak{
+       display: none !important
+     }
+
+    .ng-hide-animate.ng-hide{
+      display: none !important
+    }
+    </style>
   </head>
-  <body ng-app="mainApp">
+  <body ng-app="mainApp" >
 <!-- ========== I'm NAVBAR ==========  -->
   <% include partials/header %>
-  <div class="main-container">
+  <div class="main-container" ng-controller="skillCtrl" ng-cloak>
     <!-- <span class="num-ins-toggle">數字説明</span> -->
+    <input type="checkbox" ng-model="ch"/> <span class="fwb">Chinese</span>
     <p class="num-instruction">
-    <span class="skill-level">3</span> 工作上經常使用，相對其他技能更能靈活運用<br />
-    <span class="skill-level">2</span> 工作上未使用或少使用，但自己有做某種程度的學習，有一定程度的了解<br />
-    <span class="skill-level">1</span> 知道這項技術且有基本操作過，如有必要，能快速學習上手
+    <span class="skill-level">3</span> <span class="ch" ng-show="ch">工作上經常使用，相對其他技能更能靈活運用</span>
+    <span class="en" ng-hide="ch">Frequently used on work, relatively more familiar with them than other skills</span><br />
+    <span class="skill-level">2</span> <span class="ch" ng-show="ch">工作上未使用或少使用，但自己有做某種程度的學習，有一定程度的了解</span>
+    <span class="en" ng-hide="ch">Knowledge of these skills and actually implement them in some projects, but not frequently used on work </span><br/>
+    <span class="skill-level">1</span> <span class="ch" ng-show="ch">知道這項技術且有基本操作過，如有必要，能快速學習上手</span>
+    <span class="en" ng-hide="ch">Have basic understanding of these skills, if necessary, I can pick them up quickly</span>
     </p>
     <div class="">
       <div class="intro-box exp right--animation-1">
-        <h3>前端</h3>
+        <h3>
+          <span class="ch" ng-show="ch">前端</span>
+          <span class="en" ng-hide="ch">Front end</span>
+        </h3>
         <hr>
           <ul class="skill-list front-end">
             <li>Javascript</li><span class="skill-level">3</span> |
@@ -45,22 +61,53 @@
             <li>Canvas</li><span class="skill-level">1.5</span>
           </ul>
           <div class="skill-desc">
-            <p>對於繼承、閉包等物件導向Javascript概念有一定程度了解，目前工作接觸邏輯控制的部份較少，希望未來能有更多這方面的挑戰</p>
-            <p>能以jQuery簡潔的代碼，做UI各種效果、動畫，以及HTML DOM的操作，AJAX請求等等功能</p>
-            <p>熟悉ng-Directive、自定Directive、filter和路由控制等等的運用，雖然目前工作上沒有使用，但在這塊的自我學習上投入了相對多的心力，此個人網站是我嘗試運用MEAN stack所搭建的</p>
-            <p>為當前工作的主要接觸內容，了解其命名架構、撰寫原則、有BEM的概念，能寫出易於維護的代碼</p>
-            <p>目前工作團隊中尚未使用SASS，但在個人作業時多數使用之，了解其撰寫原則，將元件，layout、mixins等等分別撰寫再組成</p>
-            <p>能使用grid system, flex box, media query做出合適的設計</p>
-            <p>了解HTML語意標籤、基本SEO、網站效能概念</p>
-            <p>在工作專案中有使用過，對於基本長條、圓餅圖等建構與動畫熟悉，也有能力做許多客製化的需求</p>
-            <p>了解運作方式，也實際操作過，能做一些簡單的動畫引擎</p>
+            <p>
+                <span class="ch" ng-show="ch">對於繼承、閉包等物件導向Javascript概念有一定程度了解，目前工作接觸邏輯控制的部份較少，希望未來能有更多這方面的挑戰 </span>
+               <span class="en" ng-hide="ch">Knowledge of inheritance, closure, and core concepts of OOJS</span>
+            </p>
+            <p>
+              <span class="ch" ng-show="ch">能以jQuery簡潔的代碼，做UI各種效果、動畫，以及HTML DOM的操作，AJAX請求等等功能</span>
+              <span class="en" ng-hide="ch">Familiar to jQuery animation, DOM manipulation, event handle, AJAX request</span>
+            </p>
+            <p>
+              <span class="ch" ng-show="ch">熟悉ng-Directive、自定Directive、filter和路由控制等等的運用，雖然目前工作上沒有使用，但在這塊的自我學習上投入了相對多的心 力，此個人網站是我嘗試運用MEAN stack所搭建的</span>
+              <span class="en" ng-hide="ch">Familiar with Angular core features, such as customized directives, ng-repeat, and ng-route/span>
+            </p>
+            <p>
+              <span  class="ch" ng-show="ch">為當前工作的主要接觸內容，了解其命名架構、撰寫原則、有BEM的概念，能寫出易於維護的代碼</span>
+              <span class="en" ng-hide="ch">Knowledge of OOCSS, BEM, able to write maintainable CSS code,<br/>
+              Familiar with CSS animation, box model, and other main feature</span>
+            </p>
+            <p>
+              <span class="ch" ng-show="ch">目前工作團隊中尚未使用SASS，但在個人作業時多數使用之，了解其撰寫原則，將元件，layout、mixins等等分別撰寫再組成</span>
+              <span class="en" ng-hide="ch">Knowledge of SASS coding convention, such as separate code into small pieces, use variables, mixins, loop, and components</span>
+            </p>
+            <p>
+              <span class="ch" ng-show="ch">能使用grid system, flex box, media query做出合適的設計</span>
+              <span class="en" ng-hide="ch">Knowledge of making use of grid system, flex box, media query to build a mobile friendly site</span>
+            </p>
+            <p>
+              <span class="ch" ng-show="ch">了解HTML語意標籤、基本SEO、網站效能概念</span>
+              <span class="en" ng-hide="ch">Knowledge of semantic HTML, basic SEO concepts, and website performance </span>
+            </p>
+            <p>
+              <span class="ch" ng-show="ch">在工作專案中有使用過，對於基本長條、圓餅圖等建構與動畫熟悉，也有能力做許多客製化的需求</span>
+              <span class="en" ng-hide="ch">Familiar to basic patterns of charting in d3, such as scatter chart, ring chart, bar chart, and line chart.</span>
+            </p>
+            <p>
+              <span class="ch" ng-show="ch">了解運作方式，也實際操作過，能做一些簡單的動畫引擎</span>
+              <span class="en" ng-hide="ch">Knowledge of basic canvas API, able to do simple animation.</span>
+            </p>
           </div>
           <div>
 
           </div>
       </div>
       <div class="intro-box grow left--animation-2">
-        <h3>後端</h3>
+        <h3>
+          <span class="ch" ng-show="ch">後端</span>
+          <span class="en" ng-hide="ch">Back End</span>
+        </h3>
         <hr>
         <ul class="skill-list back-end">
           <li>NodeJS</li><span class="skill-level">2</span> |
@@ -68,12 +115,21 @@
           <li>Mongodb</li><span class="skill-level">1.5</span>
         </ul>
         <div class="skill-desc">
-            <p>對於NodeJS async的運作有基本概念，懂得運用其中的模組完成一些任務(如：從網路上搜爬一些資訊)</p>
-            <p>能做基本的路由控制、使用擴充模組、模版使用等等功能，此個人網站就是使用Express所搭建</p>
-            <p>能使用基本query以及使用mongoose模組與Express串接存取資料</p>
+            <p>
+              <span class="ch" ng-show="ch">對於NodeJS async的運作有基本概念，懂得運用其中的模組完成一些任務(如：從網路上搜爬一些資訊)</span>
+              <span class="en" ng-hide="ch">Knowledge of asynchronous programming, able to use some NodeJS module</span>
+            </p>
+            <p>
+              <span class="ch" ng-show="ch">能做基本的路由控制、使用擴充模組、模版使用等等功能，此個人網站就是使用Express所搭建</span>
+              <span class="en" ng-hide="ch">Knowlege of serving static data, template, and routing</span>
+            </p>
+            <p>
+              <span class="ch" ng-show="ch">能使用基本query以及使用mongoose模組與Express串接存取資料</span>
+              <span class="en" ng-hide="ch">Knowledge of basic query, using mongoose with NodeJS</span>
+            </p>
         </div>
       </div>
-      <div class="intro-box char right--animation-3">
+      <div class="intro-box char right--animation-3" ng-show="ch">
         <h3>其他</h3>
         <hr>
         <ul class="skill-list other">
@@ -89,7 +145,7 @@
             <p>公司共同專案使用github管理，了解基本團隊共同專案的作業流程，個人的練習、專案也使用git</p>
         </div>
       </div>
-      <div class="intro-box future left--animation-4">
+      <div class="intro-box future left--animation-4" ng-show="ch">
         <h3>證照</h3>
         <hr>
         <ul class="skill-list certi">
@@ -98,7 +154,7 @@
           <li>SOA EXAM FM</li><span class="skill-level">3</span>
         </ul>
         <div class="skill-desc">
-          <p>良好的英語能力幫助我學習時運用更多的英文資源，大大提高學習的效率，也能和使英語溝通的工作者溝通</p>
+          <p>良好的英語能力幫助我學習時運用更多的英文資源，大大提高學習的效率，也能和使英語 溝通的工作者溝通</p>
           <p>此為美國精算協會機率學的考科，機率上的學習使程式上的思考更加敏銳</p>
           <p>此為美國精算協會財務數學的考科，數學上的訓練能幫助我的程式撰寫</p>
         </div>

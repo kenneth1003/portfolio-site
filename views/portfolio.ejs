@@ -19,31 +19,37 @@
     <script src="//ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="javascript/angular-route.js"></script>
     <script src="javascript/app.js"></script>
   </head>
   <body ng-app="mainApp">
 <!-- ========== I'm NAVBAR ==========  -->
   <% include partials/header %>
   <div class="main-container" ng-controller="portfolioCtrl">
+  <input type="checkbox" ng-model="ch"/> <span class="fwb">Chinese</span>
 <div ng-cloak>
   <md-content>
     <md-tabs md-dynamic-height md-border-bottom>
-      <md-tab label="工作成品">
+      <md-tab label="Project">
         <md-content class="md-padding pure-g">
           <div class="single-page pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3" ng-repeat="po in work">
           <a ng-href="{{po.href}}" target="_blank">
             <div class="bg" style="background: url('{{po.img}}') center 100%;background-size: cover "></div>
             <div class="mask">
-              <p class="portfolio-desc">
+              <p class="portfolio-desc ch" ng-show="ch">
               {{po.desc}}
               </p>
+              <p class="portfolio-desc en" ng-hide="ch">
+              {{po.en_desc}}
+              </p>
             </div>
-            <p>{{po.name}}</p>
+            <p class="ch" ng-show="ch">{{po.name}}</p>
+            <p class="en" ng-hide="ch">{{po.en_name}}</p>
             </a>
           </div>
         </md-content>
       </md-tab>
-      <md-tab label="練習小品">
+<!--       <md-tab label="練習小品" ng-show="ch">
         <md-content class="md-padding pure-g">
            <div class="single-page practice pure-u-sm-1-12 pure-u-md-1-12" ng-repeat="po in practice track by po.id" data-desc="{{po.desc}}" ng-click="setLink(po.href, $index, po.desc)">
             <div class="bg" style="background: url('{{po.img}}') 50% 50% no-repeat;background-size: cover;"></div>
@@ -57,12 +63,12 @@
 
         </md-content>
       </md-tab>
-      <md-tab label="其他">
+      <md-tab label="其他" ng-show="ch">
         <md-content class="md-padding">
           <h1 class="md-display-2">建構中</h1>
 
         </md-content>
-      </md-tab>
+      </md-tab> -->
     </md-tabs>
   </md-content>
 </div>

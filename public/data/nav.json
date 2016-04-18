@@ -5,15 +5,15 @@
 	"ch":{
 		"about": {
 			"one":{
-				"title": "自傳簡歷",
+				"title": "Profile",
 				"href" : "/profile"
 			},			
 			"two":{
-				"title": "技能專長",
+				"title": "Skills",
 				"href" : "/skills"
 			},			
 			"three":{
-				"title": "我的作品",
+				"title": "Portfolio",
 				"href" : "/portfolio"
 			}
 		},

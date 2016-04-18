@@ -1,5 +1,5 @@
 (function(){
-	var app = angular.module('mainApp', ['ngMaterial']);
+	var app = angular.module('mainApp', ['ngMaterial', 'ngRoute']);
 	app.controller('indexCtrl', ['$scope', '$http', function ($scope, $http) {
 
 	}])	
@@ -22,11 +22,15 @@
 
 		$http({method:'GET', url: '../data/portfolio.json'}).then(function success(data){
 			$scope.work = data.data.ch.work;
+			$scope.en_work = data.data.ch.work;
 			$scope.practice = data.data.ch.practice;
 		},
 		function fail(err){
 			console.log(err);
 		})		
+	}])	
+	app.controller('skillCtrl', ['$scope', '$http', '$location', function ($scope, $http, $location) {
+		// $scope.ch =true;
 	}])	
 	app.controller('headerCtrl', ['$scope', '$http', function ($scope, $http) {
 		$scope.location =  window.location.pathname;

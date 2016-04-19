@@ -49,7 +49,7 @@
           <span class="en" ng-hide="ch">Front end</span>
         </h3>
         <hr>
-          <ul class="skill-list front-end">
+          <ul class="skill-list front-end" data-pos="0">
             <li>Javascript</li><span class="skill-level">3</span> |
             <li>jQuery</li><span class="skill-level">3</span> |
             <li>AngularJS</li><span class="skill-level">2</span> |
@@ -109,7 +109,7 @@
           <span class="en" ng-hide="ch">Back End</span>
         </h3>
         <hr>
-        <ul class="skill-list back-end">
+        <ul class="skill-list back-end" data-pos="1">
           <li>NodeJS</li><span class="skill-level">2</span> |
           <li>ExpressJS</li><span class="skill-level">2</span> | 
           <li>Mongodb</li><span class="skill-level">1.5</span>
@@ -132,38 +132,52 @@
       <div class="intro-box char right--animation-3">
         <h3>其他</h3>
         <hr>
-        <ul class="skill-list other">
+        <ul class="skill-list other" data-pos="2">
           <li>PhoneGap</li><span class="skill-level">2</span> |
           <li>R</li><span class="skill-level">1.5</span> |
           <li>Statistics skill</li><span class="skill-level">2</span> ｜
           <li>Git(Github)</li><span class="skill-level">2</span> 
         </ul>
         <div class="skill-desc">
-            <p class="ch" ng-show="ch">能基本使用手機擴功能(定位、照相等)，寫過測試基本功能使用的跨平台APP，能在IOS與Android系統上使用</p>
-              <p class="en" ng-hid="ch">Knowledge of basic phone utilities access, build apps can be run on both iOS and Android device</p>
-            <p class="ch" ng-show="ch">研究所論文寫作有對於R資料處理的部份研究學習</p>
-              <p class="en" ng-hid="ch">Basic knowledge of data analyst package in R, such as regression, decision tree, clustering.</p>
-            <p class="ch" ng-show="ch">財金所對於數字分析處理的訓練札實，能對於商業數字做出適當的統計分析</p>
-              <p class="en" ng-hid="ch">Knowlegdge of basic data analyst skills, such as regresstion, assumption test </p>
-            <p class="ch" ng-show="ch">公司共同專案使用github管理，了解基本團隊共同專案的作業流程，個人的練習、專案也使用git</p>
-              <p class="en" ng-hid="ch">Familiar of basic git work flow, use github and git on work</p>
+        <p>
+            <span class="ch" ng-show="ch">能基本使用手機擴功能(定位、照相等)，寫過測試基本功能使用的跨平台APP，能在IOS與Android系統上使用</span>
+            <span class="en" ng-hide="ch">Knowledge of basic phone utilities access, build basic apps can be run on both iOS and Android device</span>
+            </p>
+            <p>
+            <span class="ch" ng-show="ch">研究所論文寫作有對於R資料處理的部份研究學習</span>
+            <span class="en" ng-hide="ch">Basic knowledge of data analyst packages in R, such as regression, decision tree, and clustering.</span>
+            </p>
+            <p>
+            <span class="ch" ng-show="ch">財金所對於數字分析處理的訓練札實，能對於商業數字做出適當的統計分析</span>
+            <span class="en" ng-hide="ch">Knowlegdge of basic data analyst skills, such as regresstion, hypothesis testing </span>
+            </p>
+            <p>
+            <span class="ch" ng-show="ch">公司共同專案使用github管理，了解基本團隊共同專案的作業流程，個人的練習、專案也使用git</span>
+            <span class="en" ng-hide="ch">Familiar of basic git work flow, use github and git on work</span>
+            </p>
         </div>
       </div>
       <div class="intro-box future left--animation-4">
         <h3>證照</h3>
         <hr>
-        <ul class="skill-list certi">
+        <ul class="skill-list certi" data-pos="3">
           <li>TOEIC 900/990</li><span class="skill-level">3</span> |
           <li>SOA EXAM P pass</li><span class="skill-level">3</span> |
           <li>SOA EXAM FM pass</li><span class="skill-level">3</span>
         </ul>
         <div class="skill-desc">
-          <p class="ch" ng-show="ch">良好的英語能力幫助我學習時運用更多的英文資源，大大提高學習的效率，也能和使英語 溝通的工作者溝通</p>
-          <p class="en" ng-hide="ch">Better English skill makes my code learning and problem solving more efficiently </p>
-          <p class="ch" ng-show="ch">此為美國精算協會機率學的考科，機率上的學習使程式上的思考更加敏銳</p>
-          <p class="en" ng-hide="ch">Society of Actuaries, Probability exam, Mathematic training makes me program more efficiently and creatively</p>
-          <p class="ch" ng-show="ch">此為美國精算協會財務數學的考科，數學上的訓練能幫助我的程式撰寫</p>
-          <p class="en" ng-hide="ch">Society of Actuaries, Financial Mathematic exam, Mathematic training makes me program more efficiently and creatively</p>
+        <p>
+          <span class="ch" ng-show="ch">良好的英語能力幫助我學習時運用更多的英文資源，大大提高學習的效率，也能和使英語 溝通的工作者溝通</span>
+          <span class="en" ng-hide="ch">Better English skill makes my code learning and problem solving more efficiently </span>
+          </p>
+          <p>
+          <span class="ch" ng-show="ch">此為美國精算協會機率學的考科，機率上的學習使程式上的思考更加敏銳</span>
+          <span class="en" ng-hide="ch">Society of Actuaries, Probability exam, Mathematic training makes me program more efficiently and creatively</span>
+          </p>
+          <p>
+          <span class="ch" ng-show="ch">此為美國精算協會財務數學的考科，數學上的訓練能幫助我的程式撰寫</span>
+          <span class="en" ng-hide="ch">Society of Actuaries, Financial Mathematic exam, Mathematic training makes me program more efficiently and creatively</span>
+          </p>
 
         </div>
       </div>
@@ -179,17 +193,18 @@
         setTimeout(function(){$('.right--animation-3').css('right', 0).css('opacity', 1)}, 2*interval)
         setTimeout(function(){$('.left--animation-2').css('left', 0).css('opacity', 1)}, 2*interval);
         setTimeout(function(){$('.left--animation-4').css('left', 0).css('opacity', 1)}, 3*interval);
-      var idx;
+      var pos = [];
         // $('.num-ins-toggle').click(function(){
         //   $('.num-instruction').slideToggle();
         // })
 
         $('.skill-list li').click(function(){
+          var idx = $(this).parent().attr('data-pos')
           var nth = $(this).index()/2;
-          if(idx === nth){
+          if(pos[idx] === nth){
             return;
           }else{
-            idx = nth;
+            pos[idx] = nth;
           }
           var parent = $(this).parent();
           var color = parent.siblings('h3').css('color');

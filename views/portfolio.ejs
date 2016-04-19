@@ -11,6 +11,21 @@
     <link rel="stylesheet" href="css/pure-grids.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/portfolio.css">
+    <style type="text/css">
+      .project-detail{
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .project-detail li:nth-of-type(even){
+        list-style: none;
+      }
+      .project-detail li:nth-of-type(odd){
+        font-weight: bold;
+        
+      }
+
+    </style>
 
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -46,6 +61,43 @@
             <p class="ch" ng-show="ch">{{po.name}}</p>
             <p class="en" ng-hide="ch">{{po.en_name}}</p>
             </a>
+          </div>
+          <div>
+
+            <ul class="project-detail">
+            <h2>awoo SEO tools</h2>
+             <li>date developed  </li>
+              <li>Since mid Jan, 2016 to present</li>
+             <li>how much time it took  </li>
+              <li>Things changed and updated frequently, it hard to give a number of time consuming</li>
+             <li>technologies used and function built </li>
+              <li>HTML, CSS, Javascript, jQuery, D3js, git, gulp and sublime SFTP(online developing)</li>
+             <li>description of your role in the project  </li>
+              <li>With a RD team of approximately 10 people , 2 design, in charge of almost the whole UI in the company</li>
+             <li>short summary of what you learned</li>
+              Communication with both designers and Back-end developers, data visualization with d3, time estimate of programming work
+            </ul><ul class="project-detail">
+            <h2>Dreamtek</h2>
+             <li>date developed  </li>
+              <li>Since mid March, 2016 to present</li>
+             <li>how much time it took  </li>
+              <li>UI Approx. 30-40 working hours<br/>
+              Front-end Development, 20 working hours (estimate)</li>
+             <li>technologies used and function built </li>
+              <li>HTML, CSS, SASS, Javascript, jQuery, Angular, gulp</li>
+             <li>description of your role in the project  </li>
+              <li>With 1 backend, 1 design, in charge of the whole Front-end work</li>
+             <li>short summary of what you learned</li>
+              <li>Front-end skills I had not learned before, such as img loading order, waiting spin for img loading, </li>
+            </ul>
+
+
+
+
+
+
+
+
           </div>
         </md-content>
       </md-tab>

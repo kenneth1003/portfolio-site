@@ -129,7 +129,7 @@
             </p>
         </div>
       </div>
-      <div class="intro-box char right--animation-3" ng-show="ch">
+      <div class="intro-box char right--animation-3">
         <h3>其他</h3>
         <hr>
         <ul class="skill-list other">
@@ -139,24 +139,32 @@
           <li>Git(Github)</li><span class="skill-level">2</span> 
         </ul>
         <div class="skill-desc">
-            <p>能基本使用手機擴功能(定位、照相等)，寫過測試基本功能使用的跨平台APP，能在IOS與Android系統上使用</p>
-            <p>研究所論文寫作有對於R資料處理的部份研究學習</p>
-            <p>財金所對於數字分析處理的訓練札實，能對於商業數字做出適當的統計分析</p>
-            <p>公司共同專案使用github管理，了解基本團隊共同專案的作業流程，個人的練習、專案也使用git</p>
+            <p class="ch" ng-show="ch">能基本使用手機擴功能(定位、照相等)，寫過測試基本功能使用的跨平台APP，能在IOS與Android系統上使用</p>
+              <p class="en" ng-hid="ch">Knowledge of basic phone utilities access, build apps can be run on both iOS and Android device</p>
+            <p class="ch" ng-show="ch">研究所論文寫作有對於R資料處理的部份研究學習</p>
+              <p class="en" ng-hid="ch">Basic knowledge of data analyst package in R, such as regression, decision tree, clustering.</p>
+            <p class="ch" ng-show="ch">財金所對於數字分析處理的訓練札實，能對於商業數字做出適當的統計分析</p>
+              <p class="en" ng-hid="ch">Knowlegdge of basic data analyst skills, such as regresstion, assumption test </p>
+            <p class="ch" ng-show="ch">公司共同專案使用github管理，了解基本團隊共同專案的作業流程，個人的練習、專案也使用git</p>
+              <p class="en" ng-hid="ch">Familiar of basic git work flow, use github and git on work</p>
         </div>
       </div>
-      <div class="intro-box future left--animation-4" ng-show="ch">
+      <div class="intro-box future left--animation-4">
         <h3>證照</h3>
         <hr>
         <ul class="skill-list certi">
           <li>TOEIC 900/990</li><span class="skill-level">3</span> |
-          <li>SOA EXAM P</li><span class="skill-level">3</span> |
-          <li>SOA EXAM FM</li><span class="skill-level">3</span>
+          <li>SOA EXAM P pass</li><span class="skill-level">3</span> |
+          <li>SOA EXAM FM pass</li><span class="skill-level">3</span>
         </ul>
         <div class="skill-desc">
-          <p>良好的英語能力幫助我學習時運用更多的英文資源，大大提高學習的效率，也能和使英語 溝通的工作者溝通</p>
-          <p>此為美國精算協會機率學的考科，機率上的學習使程式上的思考更加敏銳</p>
-          <p>此為美國精算協會財務數學的考科，數學上的訓練能幫助我的程式撰寫</p>
+          <p class="ch" ng-show="ch">良好的英語能力幫助我學習時運用更多的英文資源，大大提高學習的效率，也能和使英語 溝通的工作者溝通</p>
+          <p class="en" ng-hide="ch">Better English skill makes my code learning and problem solving more efficiently </p>
+          <p class="ch" ng-show="ch">此為美國精算協會機率學的考科，機率上的學習使程式上的思考更加敏銳</p>
+          <p class="en" ng-hide="ch">Society of Actuaries, Probability exam, Mathematic training makes me program more efficiently and creatively</p>
+          <p class="ch" ng-show="ch">此為美國精算協會財務數學的考科，數學上的訓練能幫助我的程式撰寫</p>
+          <p class="en" ng-hide="ch">Society of Actuaries, Financial Mathematic exam, Mathematic training makes me program more efficiently and creatively</p>
+
         </div>
       </div>
     </div>

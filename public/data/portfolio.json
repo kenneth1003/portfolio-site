@@ -17,8 +17,8 @@
 			"p3":{
 				"name": "Dreamtek",
 				"en_name": "Dreamtek",
-				"href": "http://rocky-dusk-7171.herokuapp.com/test1/dreamtek/home.html",
-				"desc": "此為個人初次接案的半成品(尚使用假資料)，由於尚未上線，頁面為個人測試空間，首次讀取時間會稍微慢一些。",
+				"href": "http://rocky-dusk-7171.herokuapp.com/test1/dreamtek/en/home.html",
+				"desc": "此為個人初次接案的準成品，由於尚未上線，頁面為個人測試空間，首次讀取時間會稍微慢一些。",
 				"en_desc": "half-done project, it is visually completed, information on the site is still fake. Using sass for styling and Angular as front-end framework",
 				"img": "img/rsz_pw003.jpg"
 			}

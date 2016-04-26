@@ -219,4 +219,12 @@ $animation-time : .4s;
     transform: translate(-0.5px, 1.5px) rotate(0.5deg); }
   0%, 100% {
     transform: translate(0, 0) rotate(0); } }
+    
+     .ng-cloak{
+       display: none !important
+     }
+
+    .ng-hide-animate.ng-hide{
+      display: none !important
+    }
 

@@ -31,6 +31,15 @@ router.get('/guest', function(request, response) {
 var valicode = new Buffer(captchaImg()).toString('base64');   
   response.render('guest', {'valicode' : valicode, 'wrongCap': ''});
 });
+router.get('/header', function(req, res){
+  // res.render('test');
+  res.set('Content-Type', 'text/plain')
+  var s = req;
+  for(name in req.headers){
+    s += name + ': ' + req.headers[name] + '\n' 
+  }
+  res.send(s)  
+})
 
 router.get('/db-comments', function(req, res, next){
     Comment.find(function(err, data){

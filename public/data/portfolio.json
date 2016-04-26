@@ -19,7 +19,7 @@
 				"en_name": "Dreamtek",
 				"href": "http://rocky-dusk-7171.herokuapp.com/test1/dreamtek/en/home.html",
 				"desc": "此為個人初次接案的準成品，由於尚未上線，頁面為個人測試空間，首次讀取時間會稍微慢一些。",
-				"en_desc": "half-done project, it is visually completed, information on the site is still fake. Using sass for styling and Angular as front-end framework",
+				"en_desc": "It is still testing, has not released. Using sass for styling and Angular as front-end framework",
 				"img": "img/rsz_pw003.jpg"
 			}
 		},
@@ -44,16 +44,22 @@
 				"img": "img/practice/003.jpeg"					
 			},			"p4":{
 				"id"  : 4,
+				"name": "北市綠地",
+				"href": "project/google-map/index.html",
+				"desc": "此為google map API 基本的練習實作",
+				"img": "img/practice/004.jpg"					
+			},			"p5":{
+				"id"  : 5,
 				"name": "函數檢查器",
 				"href": "project/function-checker.html",
 				"desc": "此為個人用於觀察演算法在不同樣本時特性所開發的工具，雖然函數都改過了，但還是來玩玩看吧！",
-				"img": "img/practice/004.jpeg"					
-			},			"p5":{
-				"id"  : 5,
+				"img": "img/practice/005.jpeg"					
+			},			"p6":{
+				"id"  : 6,
 				"name": "D3圖表",
 				"href": "project/d3-chart.html",
 				"desc": "此為公司某項收費工具所使用的圖表整理，用以展示D3學習的成果",
-				"img": "img/practice/005.jpg"					
+				"img": "img/practice/006.jpg"					
 			}
 		}	
 	}

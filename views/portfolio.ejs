@@ -11,22 +11,6 @@
     <link rel="stylesheet" href="css/pure-grids.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/portfolio.css">
-    <style type="text/css">
-      .project-detail{
-        width: 50%;
-        display: inline-block;
-        vertical-align: top;
-      }
-      .project-detail li:nth-of-type(even){
-        list-style: none;
-      }
-      .project-detail li:nth-of-type(odd){
-        font-weight: bold;
-        
-      }
-
-    </style>
-
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
@@ -101,7 +85,7 @@
           </div>
         </md-content>
       </md-tab>
-<!--       <md-tab label="練習小品" ng-show="ch">
+      <md-tab label="練習小品" ng-show="ch">
         <md-content class="md-padding pure-g">
            <div class="single-page practice pure-u-sm-1-12 pure-u-md-1-12" ng-repeat="po in practice track by po.id" data-desc="{{po.desc}}" ng-click="setLink(po.href, $index, po.desc)">
             <div class="bg" style="background: url('{{po.img}}') 50% 50% no-repeat;background-size: cover;"></div>
@@ -111,11 +95,11 @@
             <p class="practice-name" ng-bind="po.$$hashKey"></p>
           </div>
           <div class="practice__description--alias">{{desc}}</div>
-          <iframe id="js-iframe" class="my-iframe" src="{{link}}"></iframe>
+          <iframe id="js-iframe" class="my-iframe" ng-src="{{link}}"></iframe>
 
         </md-content>
       </md-tab>
-      <md-tab label="其他" ng-show="ch">
+<!--       <md-tab label="其他" ng-show="ch">
         <md-content class="md-padding">
           <h1 class="md-display-2">建構中</h1>
 

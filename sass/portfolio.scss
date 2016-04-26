@@ -87,3 +87,15 @@
 	display: inline-block
 	}
 }
+.project-detail{
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+.project-detail li:nth-of-type(even){
+  list-style: none;
+}
+.project-detail li:nth-of-type(odd){
+  font-weight: bold;
+  
+}

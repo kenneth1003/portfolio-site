@@ -27,6 +27,10 @@ router.get('/skills', function(request, response) {
 router.get('/portfolio', function(request, response) {
   response.render('portfolio');
 });
+router.get('/test', function(request, response) {
+    console.log(123)
+  response.render('../public/logs');
+});
 router.get('/guest', function(request, response) {
 var valicode = new Buffer(captchaImg()).toString('base64');   
   response.render('guest', {'valicode' : valicode, 'wrongCap': ''});

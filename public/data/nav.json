@@ -5,15 +5,15 @@
 	"ch":{
 		"about": {
 			"one":{
-				"title": "Profile",
+				"title": "個人檔案",
 				"href" : "/profile"
 			},			
 			"two":{
-				"title": "Skills",
+				"title": "工作技能",
 				"href" : "/skills"
 			},			
 			"three":{
-				"title": "Portfolio",
+				"title": "作品集",
 				"href" : "/portfolio"
 			}
 		},

@@ -30,7 +30,7 @@
 		})		
 	}])	
 	app.controller('skillCtrl', ['$scope', '$http', '$location', function ($scope, $http, $location) {
-		// $scope.ch =true;
+		$scope.ch =true;
 	}])	
 	app.controller('headerCtrl', ['$scope', '$http', function ($scope, $http) {
 		$scope.location =  window.location.pathname;

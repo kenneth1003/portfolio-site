@@ -25,28 +25,30 @@
 <!-- ========== I'm NAVBAR ==========  -->
   <% include partials/header %>
   <div class="main-container" ng-controller="portfolioCtrl">
-  <input type="checkbox" ng-model="ch"/> <span class="fwb">Chinese</span>
+  <!-- <input type="checkbox" ng-model="ch"/> <span class="fwb">Chinese</span> -->
 <div ng-cloak>
   <md-content>
     <md-tabs md-dynamic-height md-border-bottom>
-      <md-tab label="Project">
+      <md-tab label="工作成果">
         <md-content class="md-padding pure-g">
-            <div class="single-page pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3" ng-repeat="po in work">
-            <a ng-href="{{po.href}}" target="_blank">
-              <div class="bg" style="background: url('{{po.img}}') center 100%;background-size: cover "></div>
-              <div class="mask">
-                <p class="portfolio-desc ch" ng-show="ch">
-                {{po.desc}}
-                </p>
-                <p class="portfolio-desc en" ng-hide="ch">
-                {{po.en_desc}}
-                </p>
+            <div class="card pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3" ng-repeat="po in work">
+              <div class="single-page">
+              <a ng-href="{{po.href}}" target="_blank">
+                <div class="bg" style="background: url('{{po.img}}') center 100%;background-size: cover "></div>
+                <div class="mask">
+                  <p class="portfolio-desc ch" ng-hide="ch">
+                  {{po.desc}}
+                  </p>
+                 <!--  <p class="portfolio-desc en" ng-hide="ch">
+                  {{po.en_desc}}
+                  </p> -->
+                </div>
+                <p class="ch" ng-hide="ch">{{po.name}}</p>
+                <!-- <p class="en" ng-hide="ch">{{po.en_name}}</p> -->
+                </a>
               </div>
-              <p class="ch" ng-show="ch">{{po.name}}</p>
-              <p class="en" ng-hide="ch">{{po.en_name}}</p>
-              </a>
             </div>
-            <div>
+            <!-- <div>
 
             <ul class="project-detail">
             <h2>awoo SEO tools</h2>
@@ -75,15 +77,7 @@
              <li>short summary of what you learned</li>
               <li>Front-end skills I had not learned before, such as img loading order, waiting spin for img loading, </li>
             </ul>
-
-
-
-
-
-
-
-
-          </div>
+          </div> -->
         </md-content>
       </md-tab>
       <md-tab label="練習小品" ng-show="ch">

@@ -27,10 +27,7 @@
   <div class="main-container" ng-controller="portfolioCtrl">
   <!-- <input type="checkbox" ng-model="ch"/> <span class="fwb">Chinese</span> -->
 <div ng-cloak>
-  <md-content>
-    <md-tabs md-dynamic-height md-border-bottom>
-      <md-tab label="工作成果">
-        <md-content class="md-padding pure-g">
+
             <div class="card pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3" ng-repeat="po in work">
               <div class="single-page">
               <a ng-href="{{po.href}}" target="_blank">
@@ -48,60 +45,37 @@
                 </a>
               </div>
             </div>
-            <!-- <div>
+            <div>
 
             <ul class="project-detail">
             <h2>awoo SEO tools</h2>
              <li>date developed</li>
               <li>Since mid Jan, 2016 to present</li>
-             <li>how much time it took  </li>
-              <li>Things changed and updated frequently, it hard to give a number of time consuming</li>
+             <!-- <li>how much time it took  </li>
+              <li>Things changed and updated frequently, it hard to give a number of time consuming</li> -->
              <li>technologies used and function built </li>
               <li>HTML, CSS, Javascript, jQuery, D3js, git, gulp and sublime SFTP(online developing)</li>
-             <li>description of your role in the project  </li>
+             <!-- <li>description of your role in the project  </li>
               <li>With a RD team of approximately 10 people , 2 design, in charge of almost the whole UI in the company</li>
              <li>short summary of what you learned</li>
-              Communication with both designers and Back-end developers, data visualization with d3, time estimate of programming work
+              Communication with both designers and Back-end developers, data visualization with d3, time estimate of programming work -->
 
             </ul><ul class="project-detail">
             <h2>Dreamtek</h2>
              <li>date developed  </li>
               <li>Since mid March, 2016 to present</li>
-             <li>how much time it took  </li>
-              <li>UI Approx. 30-40 working hours<br/>
+             <!-- <li>how much time it took  </li>
+              <li>UI Approx. 30-40 working hours<br/> -->
               Front-end Development, 20 working hours (estimate)</li>
              <li>technologies used and function built </li>
               <li>HTML, CSS, SASS, Javascript, jQuery, Angular, gulp</li>
-             <li>description of your role in the project  </li>
+             <!-- <li>description of your role in the project  </li>
               <li>With 1 backend, 1 design, in charge of the whole Front-end work</li>
              <li>short summary of what you learned</li>
-              <li>Front-end skills I had not learned before, such as img loading order, waiting spin for img loading, </li>
+              <li>Front-end skills I had not learned before, such as img loading order, waiting spin for img loading, </li> -->
             </ul>
-          </div> -->
-        </md-content>
-      </md-tab>
-      <md-tab label="練習小品" ng-show="ch">
-        <md-content class="md-padding pure-g">
-           <div class="single-page practice pure-u-sm-1-12 pure-u-md-1-12" ng-repeat="po in practice track by po.id" data-desc="{{po.desc}}" ng-click="setLink(po.href, $index, po.desc)">
-            <div class="bg" style="background: url('{{po.img}}') 50% 50% no-repeat;background-size: cover;"></div>
-            <div class="mask mask--gradient" ng-class="{bgz: bg === $index}"></div>
-            <p class="practice-name">{{po.name}}</p>
-            <p class="practice-name">{{po.$$hashKey}}</p>
-            <p class="practice-name" ng-bind="po.$$hashKey"></p>
           </div>
-          <div class="practice__description--alias">{{desc}}</div>
-          <iframe id="js-iframe" class="my-iframe" ng-src="{{link}}"></iframe>
 
-        </md-content>
-      </md-tab>
-<!--       <md-tab label="其他" ng-show="ch">
-        <md-content class="md-padding">
-          <h1 class="md-display-2">建構中</h1>
-
-        </md-content>
-      </md-tab> -->
-    </md-tabs>
-  </md-content>
 </div>
   </div>
 
@@ -111,7 +85,7 @@
   $('.single-page.practice').click(function(){
     console.log('123')
   })
-    
+
   </script>
   }
 </html>

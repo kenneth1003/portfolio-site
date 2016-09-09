@@ -27,38 +27,43 @@
 				"name": "退休計算機",
 				"href": "project/calculator.html",
 				"desc": "到底要存多少錢才能夠退休呢？讓我們繼續看下去...",
-				"img": "img/practice/001.jpeg"					
-			},			"p2":{
+				"img": "img/practice/001.jpeg"
+			},
+			"p2":{
 				"id"  : 2,
 				"name": "圈圈叉叉",
 				"href": "project/tic.html",
 				"desc": "我是AlphaGo的兄弟，來挑戰一下吧！",
-				"img": "img/practice/002.jpg"					
-			},			"p3":{
+				"img": "img/practice/002.jpg"
+			},
+			"p3":{
 				"id"  : 3,
 				"name": "名言產生器",
 				"href": "project/quote.html",
 				"desc": "這些名言佳句，你看過幾個？",
-				"img": "img/practice/003.jpeg"					
-			},			"p4":{
+				"img": "img/practice/003.jpeg"
+			},
+			"p4":{
 				"id"  : 4,
 				"name": "北市綠地",
 				"href": "project/google-map/index.html",
 				"desc": "此為google map API 基本的練習實作",
-				"img": "img/practice/004.jpg"					
-			},			"p5":{
+				"img": "img/practice/004.jpg"
+			},
+			"p5":{
 				"id"  : 5,
 				"name": "函數檢查器",
 				"href": "project/function-checker.html",
 				"desc": "此為個人用於觀察演算法在不同樣本時特性所開發的工具，雖然函數都改過了，但還是來玩玩看吧！",
-				"img": "img/practice/005.jpeg"					
-			},			"p6":{
+				"img": "img/practice/005.jpeg"
+			},
+			"p6":{
 				"id"  : 6,
 				"name": "D3圖表",
 				"href": "project/d3-chart.html",
 				"desc": "此為公司某項收費工具所使用的圖表整理，用以展示D3學習的成果",
-				"img": "img/practice/006.jpg"					
+				"img": "img/practice/006.jpg"
 			}
-		}	
+		}
 	}
 }
